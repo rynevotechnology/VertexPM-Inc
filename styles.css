@@ -3343,3 +3343,1480 @@ h1, h2, h3, h4, h5, h6, p, span, a {
     font-size: 0.72rem;
   }
 }
+
+/* ===================================================================
+   MULTI-PAGE LAYOUT
+   Shared page hero, cross-link cards and next-step CTA used by the
+   separate About / Services / Industries / Experience / Contact pages.
+   =================================================================== */
+a.foundation-col {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 4.5rem 0 4rem;
+  color: #FFFFFF;
+  background:
+    radial-gradient(circle at 84% 16%, rgba(243, 108, 33, 0.2), transparent 44%),
+    linear-gradient(115deg, var(--navy-deep) 0%, var(--navy-primary) 58%, var(--navy-surface) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -8%;
+  bottom: 0;
+  width: 46%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  transform: skewX(-12deg);
+  pointer-events: none;
+}
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 22%;
+  height: 4px;
+  background: var(--orange-accent);
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 1.4rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #94A3B8;
+}
+
+.page-breadcrumb a:hover {
+  color: var(--orange-accent);
+}
+
+.page-breadcrumb span[aria-current="page"] {
+  color: #CBD5E1;
+}
+
+.page-hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.page-hero-lede {
+  max-width: 720px;
+  font-size: 1.12rem;
+  line-height: 1.6;
+  color: #CBD5E1;
+}
+
+.home-about-cta {
+  margin-top: 0.5rem;
+}
+
+/* Cross-links between pages */
+.page-crosslinks {
+  padding: 5.5rem 0;
+  background: #FFFFFF;
+  border-top: 1px solid var(--border-light);
+}
+
+.crosslinks-head {
+  max-width: 760px;
+  margin-bottom: 2.6rem;
+}
+
+.crosslinks-head .section-title {
+  margin-bottom: 0.8rem;
+}
+
+.crosslinks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.crosslinks-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.crosslink-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 2rem;
+  background: var(--bg-page);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+}
+
+.crosslink-card:hover {
+  background: #FFFFFF;
+  border-color: var(--orange-accent);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.crosslink-num {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--steel-grey);
+}
+
+.crosslink-card:hover .crosslink-num {
+  color: var(--orange-accent);
+}
+
+.crosslink-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy-primary);
+  line-height: 1.25;
+}
+
+.crosslink-card p {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.crosslink-arrow {
+  margin-top: auto;
+  padding-top: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--orange-accent);
+}
+
+/* Dark closing CTA band */
+.next-step-band {
+  padding: 4.5rem 0;
+  color: #FFFFFF;
+  background: linear-gradient(120deg, var(--navy-primary) 0%, var(--navy-deep) 100%);
+  border-top: 3px solid var(--orange-accent);
+}
+
+.next-step-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.next-step-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6rem;
+}
+
+.next-step-text {
+  max-width: 560px;
+  font-size: 1.02rem;
+  color: #CBD5E1;
+}
+
+.next-step-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 992px) {
+  .crosslinks-grid,
+  .crosslinks-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .next-step-band {
+    padding: 3.5rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 3rem 0 2.75rem;
+  }
+
+  .page-hero-title {
+    font-size: 2.1rem;
+  }
+
+  .page-hero-lede {
+    font-size: 1rem;
+  }
+
+  .page-crosslinks {
+    padding: 4rem 0;
+  }
+
+  .crosslinks-grid,
+  .crosslinks-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .next-step-title {
+    font-size: 1.7rem;
+  }
+
+  .next-step-actions {
+    width: 100%;
+  }
+
+  .next-step-actions .btn-primary-orange,
+  .next-step-actions .btn-outline-white {
+    justify-content: center;
+    width: 100%;
+  }
+}
+/* ===================================================================
+   VERTEXPM FINAL EDITED - DESIGN SPECIFICATION SYSTEM
+   Directly matching VertexPM_Final_Edited.pdf (Pages 1 - 6)
+   =================================================================== */
+
+/* Brand adjustments */
+.brand-title .inc {
+  color: var(--orange-accent) !important;
+  font-weight: 700;
+}
+
+/* Base section titles & tags */
+.vpm-eyebrow {
+  display: inline-block;
+  color: var(--orange-accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.vpm-eyebrow-dark {
+  color: var(--orange-accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.vpm-heading-light {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--navy-primary);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+}
+
+.vpm-heading-dark {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+}
+
+.vpm-sub-light {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 820px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.vpm-sub-dark {
+  font-size: 1.05rem;
+  color: #CBD5E1;
+  max-width: 820px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* SECTION 1: HERO (PAGE 1) */
+.vpm-hero-section {
+  position: relative;
+  min-height: calc(100vh - 120px);
+  background-color: var(--navy-darker);
+  background-image: linear-gradient(180deg, rgba(11, 35, 65, 0.88) 0%, rgba(5, 19, 36, 0.94) 100%), url('assets/final_pdf/img_hero_construction.png');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5.5rem 0 3.5rem;
+}
+
+.vpm-hero-content {
+  max-width: 820px;
+}
+
+.vpm-hero-title {
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+}
+
+.vpm-hero-lead {
+  font-size: 1.22rem;
+  line-height: 1.65;
+  color: #E2E8F0;
+  margin-bottom: 2.4rem;
+  max-width: 740px;
+}
+
+.vpm-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.btn-vpm-orange {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--orange-accent);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.95rem 1.85rem;
+  border-radius: 4px;
+  border: 1px solid var(--orange-accent);
+  box-shadow: 0 4px 16px rgba(243, 108, 33, 0.35);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-vpm-orange:hover {
+  background: var(--orange-hover);
+  border-color: var(--orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(243, 108, 33, 0.45);
+  color: #FFFFFF;
+}
+
+.btn-vpm-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.95rem 1.85rem;
+  border-radius: 4px;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-vpm-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+  color: #FFFFFF;
+}
+
+.vpm-hero-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-top: 2.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.vpm-hero-bar-col h4 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 0.25rem;
+}
+
+.vpm-hero-bar-col p {
+  font-size: 0.92rem;
+  color: #94A3B8;
+}
+
+/* SECTION 2: OUR SERVICES (PAGE 1) */
+.vpm-services-overview {
+  padding: 5.5rem 0;
+  background: #FFFFFF;
+}
+
+.vpm-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem;
+  margin-top: 2.5rem;
+}
+
+.vpm-service-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  box-shadow: 0 2px 8px rgba(11, 35, 65, 0.04);
+}
+
+.vpm-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(11, 35, 65, 0.1);
+  border-color: var(--orange-accent);
+}
+
+.vpm-service-thumb {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.vpm-service-card:hover .vpm-service-thumb {
+  transform: scale(1.04);
+}
+
+.vpm-service-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.vpm-service-body h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--navy-primary);
+  margin-bottom: 0.65rem;
+  line-height: 1.25;
+}
+
+.vpm-service-body p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* SECTION 3: AUDIENCE BANNER (PAGE 2) */
+.vpm-audience-banner {
+  background: #F1F5F9;
+  padding: 1.5rem 0;
+  text-align: center;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.vpm-audience-text {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--orange-accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* SECTION 4: ABOUT VERTEXPM SPLIT (PAGE 2) */
+.vpm-about-section {
+  padding: 5.5rem 0 3rem;
+  background: #FFFFFF;
+}
+
+.vpm-about-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: stretch;
+  margin-bottom: 3.5rem;
+}
+
+.vpm-split-img-wrap {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(11, 35, 65, 0.08);
+  min-height: 380px;
+}
+
+.vpm-split-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.vpm-dark-box {
+  background: var(--navy-primary);
+  color: #FFFFFF;
+  border-radius: 6px;
+  padding: 3.2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vpm-dark-box h2 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  margin-bottom: 1.35rem;
+}
+
+.vpm-dark-box p {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #E2E8F0;
+}
+
+/* Mission & Vision Dual Cards */
+.vpm-mission-vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.vpm-mv-card {
+  background: var(--navy-primary);
+  color: #FFFFFF;
+  border-radius: 6px;
+  padding: 2.5rem 2.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 18px rgba(11, 35, 65, 0.12);
+}
+
+.vpm-mv-card h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.vpm-mv-card p {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: #E2E8F0;
+}
+
+/* Core Services Dark 01 02 03 (PAGE 2) */
+.vpm-core-services-section {
+  background: var(--navy-deep);
+  color: #FFFFFF;
+  padding: 5rem 0;
+}
+
+.vpm-core-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  margin-top: 2.5rem;
+}
+
+.vpm-core-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 2.2rem 2rem;
+  transition: all var(--transition-normal);
+}
+
+.vpm-core-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--orange-accent);
+  transform: translateY(-4px);
+}
+
+.vpm-core-card .vpm-step-num {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--orange-accent);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.vpm-core-card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 0.85rem;
+}
+
+.vpm-core-card p {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: #CBD5E1;
+}
+
+/* SECTION 5: CONSTRUCTION BANNER & STAGE QUALITY (PAGE 3) */
+.vpm-quality-banner {
+  position: relative;
+  height: 380px;
+  background-image: linear-gradient(180deg, rgba(11, 35, 65, 0.4) 0%, rgba(5, 19, 36, 0.75) 100%), url('assets/final_pdf/img_inspection_plans_helmet.png');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 3.5rem;
+}
+
+.vpm-quality-badge-box {
+  background: rgba(11, 35, 65, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 6px;
+  padding: 1.6rem 2.2rem;
+  max-width: 680px;
+  color: #FFFFFF;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.vpm-quality-badge-box h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 0.35rem;
+}
+
+.vpm-quality-badge-box p {
+  font-size: 0.95rem;
+  color: #CBD5E1;
+  margin: 0;
+}
+
+/* Construction-Stage Quality */
+.vpm-stage-quality-section {
+  padding: 5.5rem 0;
+  background: #FFFFFF;
+}
+
+.vpm-stage-quality-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  margin-top: 2.5rem;
+}
+
+.vpm-stage-card {
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 2.2rem 2rem;
+  background: #FFFFFF;
+  transition: all var(--transition-normal);
+  box-shadow: 0 2px 6px rgba(11, 35, 65, 0.04);
+}
+
+.vpm-stage-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--orange-accent);
+  box-shadow: 0 10px 24px rgba(11, 35, 65, 0.08);
+}
+
+.vpm-stage-card .vpm-step-num {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--orange-accent);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.vpm-stage-card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--navy-primary);
+  margin-bottom: 0.85rem;
+}
+
+.vpm-stage-card p {
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Quality Assurance for Owners & Public Agencies (PAGE 3) */
+.vpm-qa-oversight-section {
+  background: var(--navy-primary);
+  color: #FFFFFF;
+  padding: 5.5rem 0;
+}
+
+.vpm-qa-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.vpm-qa-white-card {
+  background: #FFFFFF;
+  color: var(--navy-primary);
+  border-radius: 6px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.vpm-qa-white-card h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--navy-primary);
+  margin-bottom: 1.4rem;
+  border-bottom: 2px solid var(--orange-accent);
+  padding-bottom: 0.6rem;
+  display: inline-block;
+}
+
+.vpm-qa-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.vpm-qa-checklist li {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.vpm-qa-checklist li::before {
+  content: '•';
+  color: var(--orange-accent);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* SECTION 6: SPECIALIZED INSPECTION (PAGE 4) */
+.vpm-specialized-section {
+  padding: 5.5rem 0 3rem;
+  background: #FFFFFF;
+}
+
+.vpm-specialized-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+.vpm-bullets-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+}
+
+.vpm-bullets-2col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.vpm-bullets-2col li {
+  font-size: 0.94rem;
+  color: #E2E8F0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.vpm-bullets-2col li::before {
+  content: '•';
+  color: var(--orange-accent);
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+/* Our Approach 5 Steps (PAGE 4) */
+.vpm-approach-section {
+  padding: 5rem 0;
+  background: #FFFFFF;
+}
+
+.vpm-approach-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.vpm-approach-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-top: 4px solid var(--orange-accent);
+  border-radius: 4px;
+  padding: 1.8rem 1.4rem;
+  box-shadow: 0 2px 6px rgba(11, 35, 65, 0.04);
+  transition: all var(--transition-normal);
+}
+
+.vpm-approach-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(11, 35, 65, 0.08);
+}
+
+.vpm-approach-card .vpm-step-num {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--orange-accent);
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.vpm-approach-card h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--navy-primary);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+.vpm-approach-card p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+/* Closeout & Turnover (PAGE 4) */
+.vpm-closeout-section {
+  background: var(--navy-primary);
+  color: #FFFFFF;
+  padding: 5rem 0;
+}
+
+.vpm-closeout-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  margin-top: 2.5rem;
+}
+
+.vpm-closeout-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 2.4rem 2rem;
+  transition: all var(--transition-normal);
+}
+
+.vpm-closeout-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--orange-accent);
+  transform: translateY(-4px);
+}
+
+.vpm-closeout-card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 0.85rem;
+}
+
+.vpm-closeout-card p {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: #CBD5E1;
+}
+
+/* SECTION 7: SECTORS (PAGE 5) */
+.vpm-sectors-section {
+  padding: 0 0 5rem;
+  background: #FFFFFF;
+}
+
+.vpm-sectors-banner {
+  background-image: linear-gradient(180deg, rgba(11, 35, 65, 0.85) 0%, rgba(5, 19, 36, 0.92) 100%), url('assets/final_pdf/img_inspection_plans_helmet.png');
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 0 4rem;
+  color: #FFFFFF;
+  margin-bottom: 3.5rem;
+}
+
+.vpm-sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.vpm-sector-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 2.2rem 2rem;
+  box-shadow: 0 2px 6px rgba(11, 35, 65, 0.04);
+  transition: all var(--transition-normal);
+}
+
+.vpm-sector-card:hover {
+  border-color: var(--orange-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(11, 35, 65, 0.09);
+}
+
+.vpm-sector-card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--navy-primary);
+  margin-bottom: 0.75rem;
+}
+
+.vpm-sector-card p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+/* Careers (PAGE 5) */
+.vpm-careers-section {
+  padding: 3rem 0 5rem;
+  background: #FFFFFF;
+}
+
+.vpm-careers-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+.vpm-career-tags-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin: 1.8rem 0 2rem;
+}
+
+.vpm-career-tag {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.65rem 0.5rem;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.vpm-careers-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--orange-accent);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.vpm-careers-link:hover {
+  color: #FFA566;
+}
+
+/* Why VertexPM (PAGE 5) */
+.vpm-why-section {
+  background: var(--navy-primary);
+  color: #FFFFFF;
+  padding: 5rem 0;
+}
+
+.vpm-why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem;
+  margin-top: 2.5rem;
+}
+
+.vpm-why-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 2.2rem 1.8rem;
+  transition: all var(--transition-normal);
+}
+
+.vpm-why-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--orange-accent);
+  transform: translateY(-4px);
+}
+
+.vpm-why-card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 0.85rem;
+}
+
+.vpm-why-card p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #CBD5E1;
+}
+
+/* SECTION 8: START HERE / REQUEST PROJECT SUPPORT (PAGE 6) */
+.vpm-support-section {
+  padding: 5.5rem 0;
+  background: #FFFFFF;
+}
+
+.vpm-support-split {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.vpm-support-checklist-box {
+  background: var(--navy-primary);
+  color: #FFFFFF;
+  border-radius: 6px;
+  padding: 3rem 2.8rem;
+  box-shadow: 0 10px 30px rgba(11, 35, 65, 0.12);
+}
+
+.vpm-support-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.vpm-support-checklist li {
+  font-size: 0.98rem;
+  color: #E2E8F0;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.vpm-support-checklist li .chk-icon {
+  color: #22C55E;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.vpm-form-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 2.8rem 2.5rem;
+  box-shadow: 0 10px 30px rgba(11, 35, 65, 0.06);
+}
+
+.vpm-form-card h3 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--navy-primary);
+  margin-bottom: 1.8rem;
+  letter-spacing: -0.02em;
+}
+
+.vpm-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.vpm-form-full {
+  grid-column: 1 / -1;
+}
+
+.vpm-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.vpm-form-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--navy-primary);
+}
+
+.vpm-form-input,
+.vpm-form-select,
+.vpm-form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #CBD5E1;
+  border-radius: 4px;
+  background: #F8FAFC;
+  font-size: 0.95rem;
+  color: var(--navy-primary);
+  transition: all var(--transition-fast);
+}
+
+.vpm-form-input:focus,
+.vpm-form-select:focus,
+.vpm-form-textarea:focus {
+  outline: none;
+  border-color: var(--orange-accent);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(243, 108, 33, 0.15);
+}
+
+.vpm-form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.vpm-file-upload {
+  border: 2px dashed #CBD5E1;
+  border-radius: 4px;
+  padding: 1.2rem;
+  text-align: center;
+  background: #F8FAFC;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.vpm-file-upload:hover {
+  border-color: var(--orange-accent);
+  background: #FFF7ED;
+}
+
+.btn-vpm-submit {
+  width: 100%;
+  padding: 1rem;
+  background: var(--orange-accent);
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(243, 108, 33, 0.35);
+  transition: all var(--transition-fast);
+}
+
+.btn-vpm-submit:hover {
+  background: var(--orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(243, 108, 33, 0.45);
+}
+
+/* Pre-Footer Service Recap (PAGE 6) */
+.vpm-recap-section {
+  padding: 4.5rem 0;
+  background: #F8FAFC;
+  border-top: 1px solid var(--border-light);
+}
+
+.vpm-recap-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.2rem;
+}
+
+.vpm-recap-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(11, 35, 65, 0.03);
+  transition: all var(--transition-normal);
+}
+
+.vpm-recap-card:hover {
+  border-color: var(--orange-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(11, 35, 65, 0.08);
+}
+
+.vpm-recap-card h4 {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: var(--navy-primary);
+  margin-bottom: 0.6rem;
+}
+
+.vpm-recap-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+.vpm-recap-link {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--orange-accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Pre-Footer Banner: LET'S BUILD SUCCESS TOGETHER (PAGE 6) */
+.vpm-together-banner {
+  background: var(--navy-primary);
+  color: #FFFFFF;
+  padding: 4.5rem 0;
+  border-top: 3px solid var(--orange-accent);
+}
+
+.vpm-together-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.vpm-together-content h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.02em;
+}
+
+.vpm-together-content p {
+  font-size: 1.05rem;
+  color: #CBD5E1;
+  max-width: 650px;
+}
+
+/* FOOTER (PAGE 6) */
+.vpm-footer {
+  background: var(--navy-deep);
+  color: #CBD5E1;
+  padding: 4.5rem 0 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vpm-footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.vpm-footer-brand-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 1.2rem;
+}
+
+.vpm-footer-services {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.vpm-footer-services li a {
+  color: #CBD5E1;
+  font-size: 0.95rem;
+  transition: color var(--transition-fast);
+}
+
+.vpm-footer-services li a:hover {
+  color: var(--orange-accent);
+}
+
+.vpm-peo-badge {
+  display: inline-block;
+  padding: 0.4rem 0.85rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.vpm-footer-col h5 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 1.2rem;
+}
+
+.vpm-footer-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.vpm-footer-contact-list li {
+  font-size: 0.95rem;
+}
+
+.vpm-footer-contact-list a {
+  color: #CBD5E1;
+  transition: color var(--transition-fast);
+}
+
+.vpm-footer-contact-list a:hover {
+  color: var(--orange-accent);
+}
+
+.vpm-linkedin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #0A66C2;
+  color: #FFFFFF !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  margin-top: 0.8rem;
+}
+
+.vpm-footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.88rem;
+  color: #94A3B8;
+}
+
+.vpm-footer-tagline {
+  font-style: italic;
+  color: #CBD5E1;
+  font-weight: 500;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1100px) {
+  .vpm-services-grid,
+  .vpm-recap-grid,
+  .vpm-why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vpm-approach-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .vpm-sectors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .vpm-hero-title {
+    font-size: 2.75rem;
+  }
+
+  .vpm-hero-bar {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .vpm-about-split,
+  .vpm-specialized-split,
+  .vpm-careers-split,
+  .vpm-support-split,
+  .vpm-mission-vision-grid,
+  .vpm-qa-cards-grid,
+  .vpm-core-services-grid,
+  .vpm-stage-quality-grid,
+  .vpm-closeout-grid,
+  .vpm-footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vpm-bullets-2col,
+  .vpm-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vpm-career-tags-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vpm-approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vpm-sectors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vpm-together-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

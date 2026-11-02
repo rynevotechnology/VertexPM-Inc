@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Construction Management & QA/QC Consulting | VertexPM</title>
+  <meta name="description" content="Quality management, construction management, technical inspection and closeout & turnover services for Ontario infrastructure projects.">
+  <meta name="keywords" content="QMP, CQMP, ITP, NCR Management, Construction Oversight Ontario, Concrete Inspection, Bridge Inspection Support, Closeout Turnover">
+  <meta name="author" content="VertexPM Inc.">
+  <link rel="canonical" href="https://vertexpm.ca/services.html">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Services | One project. Every phase covered.">
+  <meta property="og:description" content="Establish the system. Manage execution. Inspect the work. Close the records. Four connected service areas from VertexPM.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_CA">
+
+  <!-- Favicon using animated Canadian V emblem loop -->
+  <link rel="icon" type="image/gif" href="assets/vertex-canada-loop.gif">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured Data JSON-LD for Canadian Engineering & Consulting Practice -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "VertexPM Inc.",
+    "description": "Construction Management & Quality Consulting practice based in the Greater Toronto Area, Ontario, Canada.",
+    "url": "https://vertexpm.ca",
+    "logo": "assets/vertex-canada-loop.gif",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Greater Toronto Area",
+      "addressRegion": "ON",
+      "addressCountry": "CA"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Ontario, Canada"
+    },
+    "serviceType": [
+      "Quality Management",
+      "Construction Management",
+      "Technical Inspection",
+      "Closeout & Turnover"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Top Announcement & Canadian Infrastructure Status Bar -->
+  <div class="top-notice-bar">
+    <div class="status-pill">
+      <span class="status-dot"></span>
+      <span id="gta-time-display">Toronto, ON: 09:30 AM EDT</span>
+    </div>
+    <div class="top-quick-links">
+      <span class="top-status-text">🇨🇦 Burlington, ON • Serving Southern Ontario • PEO Authorized</span>
+      <button class="top-consult-btn" id="btn-top-consult" onclick="openConsultationModal()">📅 Book a
+        Consultation</button>
+    </div>
+  </div>
+
+  <!-- Sticky Main Navigation Header -->
+  <header class="main-header" id="top-nav">
+    <div class="container header-inner">
+      <!-- Authentic VertexPM Brand Badge with Animated Canada Loop -->
+      <a href="index.html" class="brand-lockup" id="brand-logo" aria-label="VertexPM Inc. Homepage">
+        <div class="brand-emblem-wrap">
+          <img src="assets/vertex-canada-loop.gif" alt="VertexPM Canadian Emblem - Original to Maple Leaf loop"
+            width="44" height="44" id="brand-emblem-img">
+        </div>
+        <div class="brand-meta">
+          <div class="brand-title">
+            VertexPM <span class="inc">Inc.</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="desktop-menu">
+          <li><a href="index.html" data-page="index.html" class="nav-link" id="nav-home" onclick="closeMobileMenu()">Home</a></li>
+          <li><a href="about.html" data-page="about.html" class="nav-link" id="nav-about" onclick="closeMobileMenu()">About</a></li>
+          <li><a href="services.html" data-page="services.html" class="nav-link active" id="nav-services" onclick="closeMobileMenu()">Services</a></li>
+          <li><a href="industries.html" data-page="industries.html" class="nav-link" id="nav-industries" onclick="closeMobileMenu()">Industries</a></li>
+          <li><a href="experience.html" data-page="experience.html" class="nav-link" id="nav-experience" onclick="closeMobileMenu()">Experience</a></li>
+          <li><a href="contact.html" data-page="contact.html" class="nav-link" id="nav-contact" onclick="closeMobileMenu()">Contact</a></li>
+          <li class="mobile-only-nav"><a href="javascript:void(0)" class="nav-link highlight-orange"
+              onclick="openConsultationModal(); closeMobileMenu();">📅 Book a Consultation</a></li>
+          <li class="mobile-only-nav"><a href="javascript:void(0)" class="nav-link mobile-quote-link"
+              onclick="openQuoteModal(); closeMobileMenu();">Request a Quote <span class="arrow">↗</span></a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <button class="btn-consultation-header" id="btn-open-consult-header" onclick="openConsultationModal()">
+          <span class="btn-cal-icon">📅</span> Book a Consultation
+        </button>
+        <button class="btn-quote-header" id="btn-open-quote-modal" onclick="openQuoteModal()">
+          Request a quote <span class="arrow">↗</span>
+        </button>
+        <button class="mobile-toggle" id="btn-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+          onclick="toggleMobileMenu()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" onclick="closeMobileMenu()"></div>
+
+  <main id="website-flow-container">
+
+    <section class="page-hero">
+      <div class="container">
+        <nav class="page-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span aria-current="page">Services</span>
+        </nav>
+        <span class="section-tag">WHAT WE DO</span>
+        <h1 class="page-hero-title">Four connected service areas.</h1>
+        <p class="page-hero-lede">Establish the system. Manage execution. Inspect the work. Close the records — across the full project lifecycle.</p>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION (From Concept Page 03) -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">OUR SERVICES</span>
+          <h2 class="section-title">One project. Every phase covered.</h2>
+          <p class="section-subtitle">
+            Establish the system. Manage execution. Inspect the work. Close the records.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- 01 Quality management -->
+          <div class="service-card" id="service-card-01">
+            <div class="service-card-top">
+              <span class="service-card-num">01</span>
+              <h3 class="service-card-title">Quality management</h3>
+              <p class="service-card-sub">Build quality into the process.</p>
+            </div>
+            <ul class="service-items-list">
+              <li class="service-item-row"><span class="plus">+</span> Quality Management Plans (QMP)</li>
+              <li class="service-item-row"><span class="plus">+</span> Construction Quality Management Plans (CQMP)</li>
+              <li class="service-item-row"><span class="plus">+</span> Inspection & Test Plans (ITP)</li>
+              <li class="service-item-row"><span class="plus">+</span> NCR Management</li>
+              <li class="service-item-row"><span class="plus">+</span> Quality & Internal Audits</li>
+            </ul>
+            <div class="service-card-action">
+              <button class="btn-service-detail" onclick="openDeliverableModal('Quality management')">
+                View Standards & Workflows <span class="arrow">↗</span>
+              </button>
+              <!-- <span class="service-tag-badge">ISO 9001 / CSA</span> -->
+            </div>
+          </div>
+
+          <!-- 02 Construction management -->
+          <div class="service-card" id="service-card-02">
+            <div class="service-card-top">
+              <span class="service-card-num">02</span>
+              <h3 class="service-card-title">Construction management</h3>
+              <p class="service-card-sub">Bring clarity to execution.</p>
+            </div>
+            <ul class="service-items-list">
+              <li class="service-item-row"><span class="plus">+</span> Construction Oversight</li>
+              <li class="service-item-row"><span class="plus">+</span> Contract Administration Support</li>
+              <li class="service-item-row"><span class="plus">+</span> Coordination Services</li>
+              <li class="service-item-row"><span class="plus">+</span> Schedule Monitoring</li>
+              <li class="service-item-row"><span class="plus">+</span> Risk Management</li>
+            </ul>
+            <div class="service-card-action">
+              <button class="btn-service-detail" onclick="openDeliverableModal('Construction management')">
+                View Standards & Workflows <span class="arrow">↗</span>
+              </button>
+              <!-- <span class="service-tag-badge">MTO / CCDC</span> -->
+            </div>
+          </div>
+
+          <!-- 03 Technical inspection -->
+          <div class="service-card" id="service-card-03">
+            <div class="service-card-top">
+              <span class="service-card-num">03</span>
+              <h3 class="service-card-title">Technical inspection</h3>
+              <p class="service-card-sub">Verify the work that matters.</p>
+            </div>
+            <ul class="service-items-list">
+              <li class="service-item-row"><span class="plus">+</span> Concrete & Rebar Inspection</li>
+              <li class="service-item-row"><span class="plus">+</span> Civil Works Inspection</li>
+              <li class="service-item-row"><span class="plus">+</span> Utility Inspection</li>
+              <li class="service-item-row"><span class="plus">+</span> Transit Infrastructure Inspection</li>
+              <li class="service-item-row"><span class="plus">+</span> Bridge Inspection Support</li>
+            </ul>
+            <div class="service-card-action">
+              <button class="btn-service-detail" onclick="openDeliverableModal('Technical inspection')">
+                View Standards & Workflows <span class="arrow">↗</span>
+              </button>
+              <!-- <span class="service-tag-badge">CSA A23.1 / OPSS</span> -->
+            </div>
+          </div>
+
+          <!-- 04 Closeout & turnover -->
+          <div class="service-card" id="service-card-04">
+            <div class="service-card-top">
+              <span class="service-card-num">04</span>
+              <h3 class="service-card-title">Closeout & turnover</h3>
+              <p class="service-card-sub">Finish with confidence.</p>
+            </div>
+            <ul class="service-items-list">
+              <li class="service-item-row"><span class="plus">+</span> Turnover Packages</li>
+              <li class="service-item-row"><span class="plus">+</span> Quality Documentation</li>
+              <li class="service-item-row"><span class="plus">+</span> Closeout Packages</li>
+              <li class="service-item-row"><span class="plus">+</span> Deficiency Tracking</li>
+              <li class="service-item-row"><span class="plus">+</span> Records Compilation</li>
+            </ul>
+            <div class="service-card-action">
+              <button class="btn-service-detail" onclick="openDeliverableModal('Closeout & turnover')">
+                View Standards & Workflows <span class="arrow">↗</span>
+              </button>
+              <!-- <span class="service-tag-badge">Complete Audit Trail</span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE CANADIAN INFRASTRUCTURE SCOPE ESTIMATOR TOOL -->
+    <section class="estimator-section">
+      <div class="container">
+        <div class="estimator-box">
+          <div class="estimator-header">
+            <div>
+              <span class="section-tag">INTERACTIVE SCOPE BUILDER</span>
+              <h3>Canadian Project QA/QC Scope Estimator</h3>
+              <p style="color: var(--text-secondary); margin-top: 0.3rem;">
+                Select your project parameters to generate a preliminary consulting framework according to Ontario
+                MTO/Metrolinx specifications.
+              </p>
+            </div>
+            <span class="service-tag-badge" style="font-size: 0.85rem; padding: 0.5rem 0.9rem;">Ontario Specs: CSA /
+              OPSS</span>
+          </div>
+
+          <div class="estimator-grid">
+            <div class="estimator-opt-group">
+              <label for="est-sector">Infrastructure Sector</label>
+              <select id="est-sector" class="form-control" onchange="updateEstimator()">
+                <option value="transit">Transit & LRT Networks</option>
+                <option value="bridge">Bridges & Structures (CSA S6)</option>
+                <option value="highways">Highways & Transportation (MTO)</option>
+                <option value="municipal">Municipal & Water/Wastewater</option>
+                <option value="utilities">Subsurface Utilities & Rail</option>
+              </select>
+            </div>
+
+            <div class="estimator-opt-group">
+              <label for="est-phase">Project Stage</label>
+              <select id="est-phase" class="form-control" onchange="updateEstimator()">
+                <option value="pre-con">Pre-Construction / System Design</option>
+                <option value="active-exec" selected>Active Construction / Field Inspection</option>
+                <option value="closeout">Substantial Completion / Turnover</option>
+                <option value="full-lifecycle">Full Lifecycle (Planning to Handover)</option>
+              </select>
+            </div>
+
+            <div class="estimator-opt-group">
+              <label for="est-tier">QA/QC Consulting Package</label>
+              <select id="est-tier" class="form-control" onchange="updateEstimator()">
+                <option value="partner-led">Partner-Led Oversight (Dedicated Co-founder)</option>
+                <option value="audit-only">Third-Party Quality Audits & NCR Mgmt</option>
+                <option value="field-embedded">Embedded Site Inspectors (Full-Time)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="estimator-result-card" id="estimator-result-box">
+            <div class="estimator-result-info">
+              <div class="card-eyebrow-orange" id="est-rec-tag">RECOMMENDED FRAMEWORK</div>
+              <h4 id="est-rec-title">Transit Infrastructure Quality Package</h4>
+              <p id="est-rec-desc">
+                Includes CQMP generation, CSA A23.1 concrete verification, Metrolinx inspection logs, and turnover
+                package staging.
+              </p>
+            </div>
+            <button class="btn-primary-orange" onclick="applyScopeToQuoteForm()">
+              Apply to Quote Proposal ↗
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE CROSS-LINKS -->
+    <section class="page-crosslinks">
+      <div class="container">
+        <div class="crosslinks-head">
+          <span class="section-tag">Keep exploring</span>
+          <h2 class="section-title">Where to next</h2>
+        </div>
+        <div class="crosslinks-grid">
+          <a class="crosslink-card" href="industries.html">
+            <span class="crosslink-num">03</span>
+            <h3>Industries</h3>
+            <p>Transportation, bridges, tunnels, transit, municipal infrastructure, water, rail, utilities and buildings.</p>
+            <span class="crosslink-arrow">↗</span>
+          </a>
+          <a class="crosslink-card" href="experience.html">
+            <span class="crosslink-num">04</span>
+            <h3>Experience</h3>
+            <p>The professional background the co-founders bring to every VertexPM engagement.</p>
+            <span class="crosslink-arrow">↗</span>
+          </a>
+          <a class="crosslink-card" href="contact.html">
+            <span class="crosslink-num">05</span>
+            <h3>Contact</h3>
+            <p>Request a quote or book a direct consultation with a VertexPM co-founder.</p>
+            <span class="crosslink-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEXT STEP CTA -->
+    <section class="next-step-band">
+      <div class="container next-step-inner">
+        <div>
+          <span class="section-tag">START A CONVERSATION</span>
+          <h2 class="next-step-title">Your next project. <span class="highlight-orange">Our full attention.</span></h2>
+          <p class="next-step-text">Tell us what you are building, where you need support and what comes next.</p>
+        </div>
+        <div class="next-step-actions">
+          <button class="btn-primary-orange" onclick="openConsultationModal()">
+            <span>📅</span> Book a Consultation <span class="arrow">↗</span>
+          </button>
+          <a class="btn-outline-white" href="contact.html">Request a quote</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================================
+       FOOTER
+       =================================================================== -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div
+            style="display: inline-flex; align-items: center; gap: 0.6rem; background: rgba(255,255,255,0.06); padding: 0.4rem 0.8rem; border-radius: 6px;">
+            <img src="assets/vertex-canada-loop.gif" width="32" height="32" alt="VertexPM Canadian Emblem">
+            <span style="color: #FFFFFF; font-weight: 800; font-size: 1.1rem;">VertexPM <span
+                style="font-weight: 400; color: #94A3B8;">Inc.</span></span>
+          </div>
+          <p>
+            Construction Management & Quality Consulting.<br>
+            Partner-led, field-focused practice serving the Greater Toronto Area and infrastructure projects across
+            Ontario, Canada.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Core Services</h5>
+          <ul class="footer-links">
+            <li><a href="services.html">Quality Management (QMP/ITP)</a></li>
+            <li><a href="services.html">Construction Oversight & Mgmt</a></li>
+            <li><a href="services.html">Technical Field Inspection</a></li>
+            <li><a href="services.html">Closeout & Turnover Verification</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Infrastructure Sectors</h5>
+          <ul class="footer-links">
+            <li><a href="industries.html">Transit & Guideways</a></li>
+            <li><a href="industries.html">Bridges & Heavy Civil</a></li>
+            <li><a href="industries.html">Highways & Transportation</a></li>
+            <li><a href="industries.html">Municipal Water & Utilities</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Location & Practice</h5>
+          <ul class="footer-links">
+            <li><span style="color: #FFFFFF;">Burlington, ON (Southern Ontario)</span></li>
+            <li><a href="mailto:info@vertexpminc.com">info@vertexpminc.com</a></li>
+            <li><a href="tel:5199654233">519-965-4233 / 416-575-6951</a></li>
+            <li><a href="javascript:void(0)" onclick="openConsultationModal()"
+                style="color: var(--orange-accent); font-weight: 700;">📅 Book a Consultation</a></li>
+            <li><a href="contact.html">Direct Partner Inquiry</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © <span id="current-year">2026</span> VertexPM Inc. All rights reserved. Quality in every phase.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="about.html" style="color: #94A3B8;">Practice Transparency</a>
+          <a href="experience.html" style="color: #94A3B8;">Credibility Statement</a>
+          <a href="contact.html" style="color: #94A3B8;">Ontario Compliance</a>
+          <a href="concept.html" style="color: #94A3B8;">Website Concept Deck</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================
+       MODAL WINDOW FOR QUICK QUOTE & DELIVERABLES
+       =================================================================== -->
+  <div class="modal-backdrop" id="generic-modal" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 id="modal-title" style="font-size: 1.35rem; font-weight: 800; color: var(--navy-primary);">Deliverable
+          Specification</h3>
+        <button class="modal-close-btn" onclick="closeModal()" aria-label="Close modal">×</button>
+      </div>
+      <div class="modal-body" id="modal-body-content">
+        <!-- Dynamic Content injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notice -->
+  <div class="toast-notice" id="toast-notification">
+    Proposal request received. A partner will respond within 24 hours.
+  </div>
+
+  <!-- JavaScript Application Logic -->
+  <script src="app.js"></script>
+</body>
+
+</html>

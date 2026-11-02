@@ -6,24 +6,24 @@
 
 // Current Slide state in Presentation Deck
 let currentSlideIndex = 1;
-const totalSlides = 7;
+const totalSlides = 6;
 const slideNames = [
-  "Visual Direction & Brand Identity",
-  "Homepage & Core Positioning",
-  "Our Services (01 - 04)",
-  "Infrastructure Sectors",
-  "About VertexPM & Co-Founders",
-  "Relevant Experience & Credibility",
-  "Start a Conversation & Quote Proposal"
+  "Page 1: Built for Construction & Our Services",
+  "Page 2: About VertexPM, Mission & Core Services",
+  "Page 3: Construction Quality & Agency QA Oversight",
+  "Page 4: Specialized Inspection, Approach & Closeout",
+  "Page 5: Sectors, Careers & Professional Accountability",
+  "Page 6: Request Project Support, Recap & Footer"
 ];
 
 // Initialize on DOM Ready
 document.addEventListener("DOMContentLoaded", () => {
   initWelcomeSplash();
   initLiveGtaClock();
-  initScrollSpy();
+  initActiveNav();
   initKeyboardNav();
   updateEstimator();
+  applyPendingQuotePrefill();
 
   // Set current year in footer
   const yearEl = document.getElementById("current-year");
@@ -110,9 +110,9 @@ function initLiveGtaClock() {
         hour12: true
       };
       const timeStr = new Intl.DateTimeFormat("en-CA", options).format(now);
-      clockEl.textContent = `Toronto, ON: ${timeStr} EDT`;
+      clockEl.textContent = `Burlington, ON: ${timeStr} EDT • Southern Ontario`;
     } catch (e) {
-      clockEl.textContent = "Toronto, ON: 09:30 AM EDT";
+      clockEl.textContent = "Burlington, ON: Serving Southern Ontario";
     }
   }
 
@@ -121,40 +121,26 @@ function initLiveGtaClock() {
 }
 
 /**
- * ScrollSpy for Active Navigation Link Highlighting
+ * Active Navigation Link Highlighting (multi-page site)
+ * Each page marks its own nav item via the data-page attribute.
  */
-function initScrollSpy() {
-  const sections = document.querySelectorAll("main section[id]");
-  const navLinks = document.querySelectorAll(".nav-link");
+function initActiveNav() {
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
-  window.addEventListener("scroll", () => {
-    let currentId = "home";
-    const scrollY = window.pageYOffset;
-
-    sections.forEach(section => {
-      const sectionHeight = section.offsetHeight;
-      const sectionTop = section.offsetTop - 120;
-      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        currentId = section.getAttribute("id");
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${currentId}`) {
-        link.classList.add("active");
-      }
-    });
+  document.querySelectorAll(".nav-link[data-page]").forEach(link => {
+    link.classList.toggle("active", link.dataset.page === currentPage);
   });
 }
 
 /**
- * Smooth Scroll to section
+ * Smooth Scroll to section (falls back to the home page anchor)
  */
 function scrollToSection(sectionId) {
   const target = document.getElementById(sectionId);
   if (target) {
     target.scrollIntoView({ behavior: "smooth" });
+  } else {
+    window.location.href = `index.html#${sectionId}`;
   }
 }
 
@@ -233,7 +219,7 @@ function initKeyboardNav() {
       } else if (e.key === "ArrowLeft" || e.key === "PageUp") {
         prevSlide();
       } else if (e.key === "Escape") {
-        switchViewMode("web");
+        window.location.href = "index.html";
       }
     }
   });
@@ -511,33 +497,81 @@ function selectSector(sectorName) {
   openModal(`Industry Sector: ${sectorName}`, html);
 }
 
-function prefillQuoteWithSector(sectorName) {
-  closeModal();
-  scrollToSection("contact");
-  const details = document.getElementById("client-details");
-  if (details) {
-    details.value = `Sector: ${sectorName} Infrastructure\nScope: Consulting and Quality Management support for ${sectorName} project in Ontario.\nTiming: Immediate / Upcoming tender.`;
-    details.focus();
-  }
-}
+/**
+ * Cross-page quote prefill
+ * Services / industries pages hand off their context to contact.html.
+ */
+const QUOTE_PREFILL_KEY = "vertexpm_quote_prefill";
 
-function prefillQuoteWithService(serviceName) {
-  closeModal();
-  scrollToSection("contact");
+function fillQuoteForm(prefill) {
   const svcSelect = document.getElementById("client-service");
-  if (svcSelect) {
+  if (prefill.service && svcSelect) {
     for (let i = 0; i < svcSelect.options.length; i++) {
-      if (svcSelect.options[i].text.includes(serviceName)) {
+      const option = svcSelect.options[i];
+      if (option.value === prefill.service || option.text.includes(prefill.service)) {
         svcSelect.selectedIndex = i;
         break;
       }
     }
   }
+
   const details = document.getElementById("client-details");
-  if (details) {
-    details.value = `Requested Service: ${serviceName}\nRequirement: Full scope deliverable specification and proposal for GTA infrastructure project.`;
-    details.focus();
+  if (prefill.details && details) {
+    details.value = prefill.details;
+    details.focus({ preventScroll: true });
   }
+
+  const formCard = document.querySelector(".quote-form-card");
+  if (formCard) {
+    formCard.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+}
+
+function routeQuotePrefill(prefill) {
+  if (document.getElementById("quote-inquiry-form")) {
+    fillQuoteForm(prefill);
+    return;
+  }
+
+  try {
+    sessionStorage.setItem(QUOTE_PREFILL_KEY, JSON.stringify(prefill));
+  } catch (err) {
+    console.warn("Unable to store quote prefill:", err);
+  }
+  window.location.href = "contact.html#contact";
+}
+
+function applyPendingQuotePrefill() {
+  let raw = null;
+  try {
+    raw = sessionStorage.getItem(QUOTE_PREFILL_KEY);
+  } catch (err) {
+    return;
+  }
+  if (!raw) return;
+
+  try {
+    const prefill = JSON.parse(raw);
+    sessionStorage.removeItem(QUOTE_PREFILL_KEY);
+    setTimeout(() => fillQuoteForm(prefill), 300);
+  } catch (err) {
+    console.warn("Unable to read quote prefill:", err);
+  }
+}
+
+function prefillQuoteWithSector(sectorName) {
+  closeModal();
+  routeQuotePrefill({
+    details: `Sector: ${sectorName} Infrastructure\nScope: Consulting and Quality Management support for ${sectorName} project in Ontario.\nTiming: Immediate / Upcoming tender.`
+  });
+}
+
+function prefillQuoteWithService(serviceName) {
+  closeModal();
+  routeQuotePrefill({
+    service: serviceName,
+    details: `Requested Service: ${serviceName}\nRequirement: Full scope deliverable specification and proposal for GTA infrastructure project.`
+  });
 }
 
 /**
@@ -1031,12 +1065,10 @@ function applyScopeToQuoteForm() {
   const phase = document.getElementById("est-phase")?.options[document.getElementById("est-phase").selectedIndex].text;
   const tier = document.getElementById("est-tier")?.options[document.getElementById("est-tier").selectedIndex].text;
 
-  scrollToSection("contact");
-  const details = document.getElementById("client-details");
-  if (details) {
-    details.value = `Estimated Project Scope:\n• Sector: ${sector}\n• Phase: ${phase}\n• Support Level: ${tier}\n\nPlease prepare a proposal based on these parameters.`;
-    details.focus();
-  }
+  routeQuotePrefill({
+    service: "Full QA/QC Consulting Package",
+    details: `Estimated Project Scope:\n• Sector: ${sector}\n• Phase: ${phase}\n• Support Level: ${tier}\n\nPlease prepare a proposal based on these parameters.`
+  });
 }
 
 /**
@@ -1062,3 +1094,30 @@ function showToast(message) {
     toast.classList.remove("show");
   }, 4500);
 }
+
+/**
+ * Handle Final Edited Project Support Form Submission
+ */
+function handleSupportSubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById("support-name")?.value || "Client";
+  const service = document.getElementById("support-service")?.value || "Project Support";
+  showToast(`Thank you, ${name}! Your request for ${service} has been received. A VertexPM engineer will contact you shortly.`);
+  const form = document.getElementById("project-support-form");
+  if (form) form.reset();
+  const fileDisplay = document.getElementById("file-name-display");
+  if (fileDisplay) fileDisplay.textContent = "";
+}
+
+function handleFileSelect(e) {
+  const files = e.target.files;
+  const fileDisplay = document.getElementById("file-name-display");
+  if (!fileDisplay) return;
+  if (files && files.length > 0) {
+    const names = Array.from(files).map(f => f.name).join(", ");
+    fileDisplay.textContent = `Attached: ${names}`;
+  } else {
+    fileDisplay.textContent = "";
+  }
+}
+
