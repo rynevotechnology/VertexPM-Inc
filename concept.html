@@ -61,15 +61,25 @@
 
       <!-- Action Buttons -->
       <div class="header-actions">
-        <a href="index.html" class="btn-vpm-outline" style="padding: 0.65rem 1.25rem; font-size: 0.82rem; color: var(--navy-primary); border-color: var(--navy-primary);">
+        <a href="index.html" class="btn-vpm-outline header-cta-btn" style="color: var(--navy-primary); border-color: var(--navy-primary);">
           LIVE WEBSITE ↗
         </a>
-        <a href="index.html#contact" class="btn-vpm-orange" style="padding: 0.65rem 1.25rem; font-size: 0.82rem;">
+        <a href="index.html#contact" class="btn-vpm-orange header-cta-btn">
           REQUEST SUPPORT
         </a>
+        <button class="mobile-toggle" id="btn-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+          onclick="toggleMobileMenu()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
       </div>
     </div>
   </header>
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" onclick="closeMobileMenu()"></div>
 
   <main id="concept-main">
     <!-- SLIDES PRESENTATION MODE -->
