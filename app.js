@@ -1098,15 +1098,48 @@ function showToast(message) {
 /**
  * Handle Final Edited Project Support Form Submission
  */
-function handleSupportSubmit(e) {
+async function handleSupportSubmit(e) {
   e.preventDefault();
-  const name = document.getElementById("support-name")?.value || "Client";
+  const form = e.currentTarget;
+  if (!(form instanceof HTMLFormElement)) return;
+
+  const submitButton = document.getElementById("btn-submit-support");
+  if (!(submitButton instanceof HTMLButtonElement)) return;
+
+  if (!window.emailjs) {
+    showToast("The email service is unavailable. Please try again later or email info@vertexpminc.com.");
+    return;
+  }
+
+  const name = document.getElementById("support-name")?.value.trim() || "Client";
   const service = document.getElementById("support-service")?.value || "Project Support";
-  showToast(`Thank you, ${name}! Your request for ${service} has been received. A VertexPM engineer will contact you shortly.`);
-  const form = document.getElementById("project-support-form");
-  if (form) form.reset();
-  const fileDisplay = document.getElementById("file-name-display");
-  if (fileDisplay) fileDisplay.textContent = "";
+  const submittedAt = document.getElementById("support-submitted-at");
+  if (submittedAt instanceof HTMLInputElement) {
+    submittedAt.value = new Date().toLocaleString("en-CA", { timeZone: "America/Toronto" });
+  }
+
+  const originalButtonText = submitButton.textContent;
+  submitButton.disabled = true;
+  submitButton.textContent = "SENDING...";
+
+  try {
+    await window.emailjs.sendForm(
+      "service_ime2phk",
+      "template_n1kloie",
+      form,
+      { publicKey: "ai_RCRKHyCqY4TBQ1" }
+    );
+    showToast(`Thank you, ${name}! Your request for ${service} has been sent. A VertexPM engineer will contact you shortly.`);
+    form.reset();
+    const fileDisplay = document.getElementById("file-name-display");
+    if (fileDisplay) fileDisplay.textContent = "";
+  } catch (error) {
+    console.error("EmailJS project request failed:", error);
+    showToast("Your request could not be sent. Please try again or email info@vertexpminc.com.");
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = originalButtonText;
+  }
 }
 
 function handleCareerSubmit(e) {

@@ -229,26 +229,26 @@
                             <div class="vpm-form-grid">
                                 <div class="vpm-form-group">
                                     <label class="vpm-form-label" for="support-name">Name / Organization *</label>
-                                    <input type="text" id="support-name" class="vpm-form-input"
+                                    <input type="text" id="support-name" name="name" class="vpm-form-input"
                                         placeholder="Your name or organization" required>
                                 </div>
 
                                 <div class="vpm-form-group">
                                     <label class="vpm-form-label" for="support-contact">Email / Phone *</label>
-                                    <input type="text" id="support-contact" class="vpm-form-input"
+                                    <input type="text" id="support-contact" name="contact" class="vpm-form-input"
                                         placeholder="email@company.com or phone" required>
                                 </div>
 
                                 <div class="vpm-form-group vpm-form-full">
                                     <label class="vpm-form-label" for="support-project">Project name and location
                                         *</label>
-                                    <input type="text" id="support-project" class="vpm-form-input"
+                                    <input type="text" id="support-project" name="project" class="vpm-form-input"
                                         placeholder="e.g. Burlington Infrastructure Upgrade" required>
                                 </div>
 
                                 <div class="vpm-form-group">
                                     <label class="vpm-form-label" for="support-service">Service required *</label>
-                                    <select id="support-service" class="vpm-form-select" required>
+                                    <select id="support-service" name="service" class="vpm-form-select" required>
                                         <option value="">Select a service...</option>
                                         <option value="Construction Management">Construction Management</option>
                                         <option value="Quality Management">Quality Management (CQMPs, ITPs)</option>
@@ -263,7 +263,7 @@
 
                                 <div class="vpm-form-group">
                                     <label class="vpm-form-label" for="support-stage">Current project stage</label>
-                                    <select id="support-stage" class="vpm-form-select">
+                                    <select id="support-stage" name="stage" class="vpm-form-select">
                                         <option value="Planning & Pre-Construction">Planning & Pre-Construction</option>
                                         <option value="Permitting & Engineering">Permitting & Engineering</option>
                                         <option value="Active Construction">Active Construction</option>
@@ -274,14 +274,16 @@
 
                                 <div class="vpm-form-group vpm-form-full">
                                     <label class="vpm-form-label" for="support-date">Required start date</label>
-                                    <input type="date" id="support-date" class="vpm-form-input">
+                                    <input type="date" id="support-date" name="start_date" class="vpm-form-input">
                                 </div>
 
                                 <div class="vpm-form-group vpm-form-full">
                                     <label class="vpm-form-label" for="support-desc">Brief project description</label>
-                                    <textarea id="support-desc" class="vpm-form-textarea"
+                                    <textarea id="support-desc" name="description" class="vpm-form-textarea"
                                         placeholder="Outline scope, specific challenges, requirements, or hold points..."></textarea>
                                 </div>
+
+                                <input type="hidden" id="support-submitted-at" name="submitted_at">
 
                                 <div class="vpm-form-group vpm-form-full">
                                     <label class="vpm-form-label">Attach drawings or supporting documents</label>
@@ -289,7 +291,7 @@
                                         onclick="document.getElementById('support-file').click()">
                                         <span>📄 Click to attach drawings, ITPs or specifications (PDF, DWG, DOCX; max
                                             25 MB per file)</span>
-                                        <input type="file" id="support-file" style="display: none;" multiple
+                                        <input type="file" id="support-file" name="support_files" style="display: none;" multiple
                                             onchange="handleFileSelect(event)">
                                         <div id="file-name-display" role="status" aria-live="polite"
                                             style="margin-top: 0.5rem; font-weight: 600; color: var(--navy-primary);">
@@ -348,10 +350,10 @@
                         <li><a href="#insights">Quality Assurance & Inspection</a></li>
                         <li><a href="#services">Building Permit Support</a></li>
                     </ul>
-                    <img class="vpm-peo-logo"
+                    <!-- <img class="vpm-peo-logo"
                         src="assets/Screenshot 2026-11-03 193403_upscayl_8x_upscayl-standard-4x.png"
                         alt="Professional Engineers Ontario">
-                    <p style="color: #FFFFFF; font-size: 14px; margin-top: 10px;">Certificate of Authorization</p>
+                    <p style="color: #FFFFFF; font-size: 14px; margin-top: 10px;">Certificate of Authorization</p> -->
                 </div>
 
                 <!-- Col 2: Location & Service Area -->
@@ -407,6 +409,8 @@
         Project request submitted successfully. A VertexPM engineer will follow up promptly.
     </div>
 
+    <!-- EmailJS Browser SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- JavaScript Application Logic -->
     <script src="app.js"></script>
 </body>
