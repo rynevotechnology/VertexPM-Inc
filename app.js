@@ -1109,15 +1109,56 @@ function handleSupportSubmit(e) {
   if (fileDisplay) fileDisplay.textContent = "";
 }
 
+function handleCareerSubmit(e) {
+  e.preventDefault();
+  const form = e.currentTarget;
+  if (!(form instanceof HTMLFormElement)) return;
+
+  const fields = new FormData(form);
+  const firstName = String(fields.get("firstName") || "");
+  const lastName = String(fields.get("lastName") || "");
+  const email = String(fields.get("email") || "");
+  const phone = String(fields.get("phone") || "");
+  const position = String(fields.get("position") || "");
+  const linkedin = String(fields.get("linkedin") || "");
+  const message = String(fields.get("message") || "");
+  const subject = `Career Application - ${firstName} ${lastName}`;
+  const body = [
+    `Name: ${firstName} ${lastName}`,
+    `Email: ${email}`,
+    `Phone: ${phone}`,
+    `Area of interest: ${position}`,
+    `LinkedIn: ${linkedin || "Not provided"}`,
+    "",
+    "Message:",
+    message,
+    "",
+    "I will attach my resume before sending."
+  ].join("\n");
+
+  window.location.href = `mailto:info@vertexpminc.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  showToast("Your email app should open with your application details. Attach your resume before sending.");
+}
+
 function handleFileSelect(e) {
   const files = e.target.files;
   const fileDisplay = document.getElementById("file-name-display");
   if (!fileDisplay) return;
   if (files && files.length > 0) {
+    const maxFileSize = 25 * 1024 * 1024;
+    const oversizedFiles = Array.from(files).filter(file => file.size > maxFileSize);
+    if (oversizedFiles.length > 0) {
+      e.target.value = "";
+      const names = oversizedFiles.map(file => file.name).join(", ");
+      const message = `Each file must be 25 MB or smaller. Please remove or reduce: ${names}`;
+      fileDisplay.textContent = message;
+      showToast(message);
+      return;
+    }
+
     const names = Array.from(files).map(f => f.name).join(", ");
     fileDisplay.textContent = `Attached: ${names}`;
   } else {
     fileDisplay.textContent = "";
   }
 }
-

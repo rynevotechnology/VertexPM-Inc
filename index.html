@@ -20,7 +20,7 @@
   <meta property="og:locale" content="en_CA">
 
   <!-- Favicon using Canadian V emblem loop -->
-  <link rel="icon" type="image/gif" href="assets/vertex-canada-loop.gif">
+  <link rel="icon" type="image/gif" href="assets/final_pdf/image.png">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
@@ -66,8 +66,7 @@
       <span id="gta-time-display">Burlington, ON: Serving Southern Ontario</span>
     </div>
     <div class="top-quick-links">
-      <span class="top-status-text">PEO Certificate of Authorization • 519-965-4233 / 416-575-6951</span>
-      <a href="#contact" class="top-consult-btn">Request Support</a>
+      <span class="top-status-text">+1(519)-965-4233 / +1(416)-575-6951</span>
     </div>
   </div>
 
@@ -77,7 +76,7 @@
       <!-- Authentic VertexPM Brand Badge -->
       <a href="index.html" class="brand-lockup" id="brand-logo" aria-label="VertexPM Inc. Homepage">
         <div class="brand-emblem-wrap">
-          <img src="assets/vertex-canada-loop.gif" alt="VertexPM Emblem" width="44" height="44" id="brand-emblem-img">
+          <img src="assets/final_pdf/image.png" alt="VertexPM Emblem" width="44" height="44" id="brand-emblem-img">
         </div>
         <div class="brand-meta">
           <div class="brand-title">
@@ -89,23 +88,20 @@
       <!-- Desktop Navigation Menu -->
       <nav aria-label="Main Navigation">
         <ul class="nav-menu" id="desktop-menu">
-          <li><a href="#about" class="nav-link" id="nav-about" onclick="closeMobileMenu()">ABOUT</a></li>
-          <li><a href="#services" class="nav-link" id="nav-services" onclick="closeMobileMenu()">SERVICES</a></li>
-          <li><a href="#sectors" class="nav-link" id="nav-sectors" onclick="closeMobileMenu()">SECTORS</a></li>
-          <li><a href="#insights" class="nav-link" id="nav-insights" onclick="closeMobileMenu()">INSIGHTS</a></li>
-          <li><a href="#careers" class="nav-link" id="nav-careers" onclick="closeMobileMenu()">CAREERS</a></li>
-          <li><a href="#contact" class="nav-link" id="nav-contact" onclick="closeMobileMenu()">CONTACT</a></li>
+          <li><a href="index.html" class="nav-link" id="nav-home" onclick="closeMobileMenu()">HOME</a></li>
+          <li><a href="about.html" class="nav-link" id="nav-about" onclick="closeMobileMenu()">ABOUT</a></li>
+          <li><a href="services.html" class="nav-link" id="nav-services" onclick="closeMobileMenu()">SERVICES</a></li>
+          <li><a href="sectors.html" class="nav-link" id="nav-sectors" onclick="closeMobileMenu()">SECTORS</a></li>
+          <li><a href="careers.html" class="nav-link" id="nav-careers" onclick="closeMobileMenu()">CAREERS</a></li>
+          <li><a href="contact.html" class="nav-link" id="nav-contact" onclick="closeMobileMenu()">CONTACT</a></li>
           <li class="mobile-only-nav">
-            <a href="#contact" class="nav-link highlight-orange" onclick="closeMobileMenu()">REQUEST PROJECT SUPPORT</a>
+            <a href="contact.html" class="nav-link highlight-orange" onclick="closeMobileMenu()">REQUEST PROJECT
+              SUPPORT</a>
           </li>
         </ul>
       </nav>
-
       <!-- Action Button -->
       <div class="header-actions">
-        <a href="#contact" class="btn-vpm-orange header-cta-btn">
-          REQUEST PROJECT SUPPORT
-        </a>
         <button class="mobile-toggle" id="btn-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
           onclick="toggleMobileMenu()">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -120,6 +116,7 @@
   </header>
   <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" onclick="closeMobileMenu()"></div>
 
+
   <main>
 
     <!-- ===================================================================
@@ -128,6 +125,7 @@
     <section class="vpm-hero-section" id="hero">
       <div class="container">
         <div class="vpm-hero-content">
+          <div class="eyebrow">home VertexPM</div>
           <span class="vpm-eyebrow">CONSTRUCTION • QUALITY • ENGINEERING</span>
           <h1 class="vpm-hero-title">
             Built for construction.<br>
@@ -140,77 +138,41 @@
           </p>
           <div class="vpm-hero-actions">
             <a href="#contact" class="btn-vpm-orange">REQUEST PROJECT SUPPORT</a>
-            <a href="#services" class="btn-vpm-outline">EXPLORE SERVICES</a>
+            <a href="services.html" class="btn-vpm-outline">EXPLORE SERVICES</a>
           </div>
         </div>
 
-        <!-- 3-Column Hero Stat / Location Bar -->
+        <!-- Hero Location & Service Area Bar -->
         <div class="vpm-hero-bar">
           <div class="vpm-hero-bar-col">
+            <span class="vpm-bar-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Location
+            </span>
             <h4>Burlington, Ontario</h4>
-            <p>Serving Southern Ontario</p>
           </div>
+
           <div class="vpm-hero-bar-col">
-            <h4>PEO Certificate of Authorization</h4>
-            <p>Professional engineering practice</p>
-          </div>
-          <div class="vpm-hero-bar-col">
-            <h4>Planning through closeout</h4>
-            <p>One connected approach</p>
+            <span class="vpm-bar-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              Service Area
+            </span>
+            <h4>Southern Ontario</h4>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================================================================
-         PAGE 1: OUR SERVICES
-         =================================================================== -->
-    <section class="vpm-services-overview" id="services">
-      <div class="container">
-        <span class="vpm-eyebrow">OUR SERVICES</span>
-        <h2 class="vpm-heading-light">Project support that keeps construction moving.</h2>
 
-        <div class="vpm-services-grid">
-          <!-- Card 1 -->
-          <div class="vpm-service-card">
-            <img src="assets/final_pdf/Golden Hour Construction Planning.png" alt="Construction Management"
-              class="vpm-service-thumb">
-            <div class="vpm-service-body">
-              <h3>Construction Management</h3>
-              <p>Coordination, reporting, documentation and delivery support.</p>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="vpm-service-card">
-            <img src="assets/final_pdf/img_about_highway_bridge.png" alt="Quality Management" class="vpm-service-thumb">
-            <div class="vpm-service-body">
-              <h3>Quality Management</h3>
-              <p>CQMPs, ITPs, inspections, NCRs and records.</p>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="vpm-service-card">
-            <img src="assets/final_pdf/img_inspection_plans_helmet.png" alt="Building Permit Support"
-              class="vpm-service-thumb">
-            <div class="vpm-service-body">
-              <h3>Building Permit Support</h3>
-              <p>Permit coordination with Professional Engineer support.</p>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="vpm-service-card">
-            <img src="assets/final_pdf/img_hero_construction.png" alt="Closeout & Turnover" class="vpm-service-thumb">
-            <div class="vpm-service-body">
-              <h3>Closeout & Turnover</h3>
-              <p>Complete, traceable and organized project records.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- ===================================================================
          PAGE 2: AUDIENCE BANNER
@@ -223,568 +185,37 @@
       </div>
     </div>
 
-    <!-- ===================================================================
-         PAGE 2: ABOUT VERTEXPM & MISSION / VISION
-         =================================================================== -->
-    <section class="vpm-about-section" id="about">
-      <div class="container">
-        <!-- Split Feature -->
-        <div class="vpm-about-split">
-          <div class="vpm-split-img-wrap">
-            <img src="assets/final_pdf/img_about_highway_bridge.png" alt="Southern Ontario Infrastructure Highway"
-              class="vpm-split-img">
-          </div>
-          <div class="vpm-dark-box">
-            <span class="vpm-eyebrow-dark">ABOUT VERTEXPM</span>
-            <h2>Practical support. Clear accountability. Quality from start to finish.</h2>
-            <p>
-              VertexPM Inc. is a Burlington-based construction management, quality and engineering-support company
-              serving Southern Ontario. We support contractors, municipalities, project owners, developers and project
-              teams through project planning, permitting, construction, inspection, testing, documentation and final
-              turnover. VertexPM operates under a PEO Certificate of Authorization.
-            </p>
-          </div>
-        </div>
 
-        <!-- Mission & Vision Dual Cards -->
-        <div style="margin-bottom: 1.5rem;">
-          <span class="vpm-eyebrow">MISSION & VISION</span>
-        </div>
-        <div class="vpm-mission-vision-grid">
-          <div class="vpm-mv-card">
-            <h3>Our Mission</h3>
-            <p>
-              Our mission is to provide reliable construction management, quality assurance, quality control and
-              engineering support that helps our clients deliver projects in accordance with project requirements. From
-              planning and inspections through testing, documentation and final closeout, we focus on practical
-              solutions, clear accountability and getting the work done right.
-            </p>
-          </div>
-          <div class="vpm-mv-card">
-            <h3>Our Vision</h3>
-            <p>
-              Our vision is to build VertexPM into a trusted construction and quality partner across Southern Ontario,
-              known for dependable technical support, strong quality oversight and properly delivered projects. We want
-              to be the team contractors, municipalities, owners and developers can rely on when quality matters.
-            </p>
-          </div>
-        </div>
+    <div class="container">
+      <!-- Mission & Vision Dual Cards -->
+      <div style="margin-bottom: 1.5rem;">
+        <span class="vpm-eyebrow">MISSION & VISION</span>
       </div>
-    </section>
-
-    <!-- ===================================================================
-         PAGE 2: CORE SERVICES (01 02 03)
-         =================================================================== -->
-    <section class="vpm-core-services-section">
-      <div class="container">
-        <span class="vpm-eyebrow-dark">CORE SERVICES</span>
-        <h2 class="vpm-heading-dark">Clear services. Defined outcomes.</h2>
-
-        <div class="vpm-core-services-grid">
-          <!-- 01 -->
-          <div class="vpm-core-card">
-            <span class="vpm-step-num">01</span>
-            <h3>Construction Management</h3>
-            <p>Project coordination, reporting, RFI support, action tracking, document control and construction-phase
-              delivery support.</p>
-          </div>
-
-          <!-- 02 -->
-          <div class="vpm-core-card">
-            <span class="vpm-step-num">02</span>
-            <h3>Quality Management</h3>
-            <p>CQMPs, ITPs, checklists, audits, NCRs, deficiencies, red-line drawings, as-built records and quality
-              closeout.</p>
-          </div>
-
-          <!-- 03 -->
-          <div class="vpm-core-card">
-            <span class="vpm-step-num">03</span>
-            <h3>Building Permit Support</h3>
-            <p>Permit drawings, design coordination, Professional Engineer review, submission support and responses to
-              municipal comments.</p>
-          </div>
+      <div class="vpm-mission-vision-grid">
+        <div class="vpm-mv-card">
+          <h3>Our Mission</h3>
+          <p>
+            Our mission is to provide reliable construction management, quality assurance, quality control and
+            engineering support that helps our clients deliver projects in accordance with project requirements. From
+            planning and inspections through testing, documentation and final closeout, we focus on practical
+            solutions, clear accountability and getting the work done right.
+          </p>
         </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         PAGE 3: CONSTRUCTION BANNER
-         =================================================================== -->
-    <div class="vpm-quality-banner">
-      <div class="container">
-        <div class="vpm-quality-badge-box">
-          <h3>Quality controlled throughout construction.</h3>
-          <p>Inspections, testing, quality CoCs and project records stay connected to the work.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ===================================================================
-         PAGE 3: CONSTRUCTION-STAGE QUALITY
-         =================================================================== -->
-    <section class="vpm-stage-quality-section">
-      <div class="container">
-        <span class="vpm-eyebrow">CONSTRUCTION-STAGE QUALITY</span>
-        <h2 class="vpm-heading-light">Inspection, testing and compliance support.</h2>
-        <p class="vpm-sub-light">
-          VertexPM helps project teams plan, coordinate, review and track the evidence needed to demonstrate that
-          construction requirements have been met.
-        </p>
-
-        <div class="vpm-stage-quality-grid">
-          <!-- 01 -->
-          <div class="vpm-stage-card">
-            <span class="vpm-step-num">01</span>
-            <h3>Inspection Coordination</h3>
-            <p>Inspection planning, hold and witness point tracking, inspection records and deficiency follow-up.</p>
-          </div>
-
-          <!-- 02 -->
-          <div class="vpm-stage-card">
-            <span class="vpm-step-num">02</span>
-            <h3>Testing Coordination</h3>
-            <p>Testing requirements, laboratory coordination, report tracking, result review and outstanding report
-              follow-up.</p>
-          </div>
-
-          <!-- 03 -->
-          <div class="vpm-stage-card">
-            <span class="vpm-step-num">03</span>
-            <h3>Records & Compliance</h3>
-            <p>Quality CoC review, material documentation, compliance tracking, red-line drawings and as-built record
-              control.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         PAGE 3: QUALITY ASSURANCE FOR OWNERS & PUBLIC AGENCIES
-         =================================================================== -->
-    <section class="vpm-qa-oversight-section" id="insights">
-      <div class="container">
-        <span class="vpm-eyebrow-dark">QUALITY ASSURANCE FOR OWNERS & PUBLIC AGENCIES</span>
-        <h2 class="vpm-heading-dark">Independent quality oversight for municipalities and project owners.</h2>
-        <p class="vpm-sub-dark">
-          VertexPM supports Cities, public agencies and owners in verifying that specified quality requirements are
-          addressed and that the completed work is supported by clear, traceable quality records.
-        </p>
-
-        <div class="vpm-qa-cards-grid">
-          <div class="vpm-qa-white-card">
-            <h3>Owner / Agency QA Oversight</h3>
-            <ul class="vpm-qa-checklist">
-              <li>Quality plan and ITP review</li>
-              <li>Contractor QA/QC review</li>
-              <li>Inspection and testing oversight</li>
-              <li>NCR and deficiency monitoring</li>
-            </ul>
-          </div>
-
-          <div class="vpm-qa-white-card">
-            <h3>Acceptance & Turnover Review</h3>
-            <ul class="vpm-qa-checklist">
-              <li>Test and inspection record review</li>
-              <li>Quality CoC review</li>
-              <li>As-built and red-line verification</li>
-              <li>Final quality package review</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         PAGE 4: SPECIALIZED INSPECTION
-         =================================================================== -->
-    <section class="vpm-specialized-section">
-      <div class="container">
-        <div class="vpm-specialized-split">
-          <div class="vpm-split-img-wrap">
-            <img src="assets/final_pdf/img_welding_coating_gauge.png" alt="Welding and Protective Coating Inspection"
-              class="vpm-split-img">
-          </div>
-          <div class="vpm-dark-box">
-            <span class="vpm-eyebrow-dark">SPECIALIZED INSPECTION</span>
-            <h2>Welding and protective coating inspection.</h2>
-            <p>
-              Focused inspection support for steel structures, rehabilitation work and other project-specific
-              requirements.
-            </p>
-
-            <div class="vpm-bullets-2col">
-              <ul>
-                <li>Welding inspection</li>
-                <li>Weld documentation review</li>
-                <li>Visual inspection records</li>
-                <li>Protective coating inspection</li>
-              </ul>
-              <ul>
-                <li>Surface preparation checks</li>
-                <li>Coating application monitoring</li>
-                <li>Dry film thickness checks</li>
-                <li>Inspection reporting</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         PAGE 4: OUR APPROACH (01 - 05)
-         =================================================================== -->
-    <section class="vpm-approach-section" id="approach">
-      <div class="container">
-        <span class="vpm-eyebrow">OUR APPROACH</span>
-        <h2 class="vpm-heading-light">From requirement to completion. Nothing disconnected.</h2>
-
-        <div class="vpm-approach-grid">
-          <!-- 01 DEFINE -->
-          <div class="vpm-approach-card">
-            <span class="vpm-step-num">01</span>
-            <h3>DEFINE</h3>
-            <p>Confirm scope, requirements, responsibilities and deliverables.</p>
-          </div>
-
-          <!-- 02 PLAN -->
-          <div class="vpm-approach-card">
-            <span class="vpm-step-num">02</span>
-            <h3>PLAN</h3>
-            <p>Set the quality, permit, inspection and documentation strategy.</p>
-          </div>
-
-          <!-- 03 EXECUTE -->
-          <div class="vpm-approach-card">
-            <span class="vpm-step-num">03</span>
-            <h3>EXECUTE</h3>
-            <p>Coordinate construction, inspections, testing and reporting.</p>
-          </div>
-
-          <!-- 04 CONTROL -->
-          <div class="vpm-approach-card">
-            <span class="vpm-step-num">04</span>
-            <h3>CONTROL</h3>
-            <p>Track reports, CoCs, red-lines, NCRs and deficiencies.</p>
-          </div>
-
-          <!-- 05 CLOSE -->
-          <div class="vpm-approach-card">
-            <span class="vpm-step-num">05</span>
-            <h3>CLOSE</h3>
-            <p>Complete as-builts, reconcile records and deliver turnover.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         PAGE 4: CLOSEOUT & TURNOVER
-         =================================================================== -->
-    <section class="vpm-closeout-section">
-      <div class="container">
-        <span class="vpm-eyebrow-dark">CLOSEOUT & TURNOVER</span>
-        <h2 class="vpm-heading-dark">Complete records. Clear status. Controlled turnover.</h2>
-
-        <div class="vpm-closeout-grid">
-          <div class="vpm-closeout-card">
-            <h3>Documentation Gap Review</h3>
-            <p>Identify missing inspection, testing, material and compliance records before turnover.</p>
-          </div>
-
-          <div class="vpm-closeout-card">
-            <h3>Issue Closure</h3>
-            <p>Track NCRs, deficiencies, outstanding reports and unresolved quality documentation.</p>
-          </div>
-
-          <div class="vpm-closeout-card">
-            <h3>Final Packages</h3>
-            <p>Reconcile red-lines and as-builts, prepare indexes and organize project turnover packages.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         PAGE 5: SECTORS
-         =================================================================== -->
-    <section class="vpm-sectors-section" id="sectors">
-      <div class="vpm-sectors-banner">
-        <div class="container">
-          <span class="vpm-eyebrow-dark">SECTORS</span>
-          <h2 class="vpm-heading-dark">Built for Southern Ontario.</h2>
-          <p class="vpm-sub-dark" style="margin-bottom: 0;">
-            Construction and quality support across infrastructure, municipal, structural, building and rehabilitation
-            projects.
+        <div class="vpm-mv-card">
+          <h3>Our Vision</h3>
+          <p>
+            Our vision is to build VertexPM into a trusted construction and quality partner across Southern Ontario,
+            known for dependable technical support, strong quality oversight and properly delivered projects. We want
+            to be the team contractors, municipalities, owners and developers can rely on when quality matters.
           </p>
         </div>
       </div>
-
-      <div class="container">
-        <div class="vpm-sectors-grid">
-          <!-- 1 -->
-          <div class="vpm-sector-card">
-            <h3>Transportation & Transit</h3>
-            <p>Roads, bridges, transit and transportation construction.</p>
-          </div>
-
-          <!-- 2 -->
-          <div class="vpm-sector-card">
-            <h3>Municipal Infrastructure</h3>
-            <p>Civil, utilities, drainage and public infrastructure.</p>
-          </div>
-
-          <!-- 3 -->
-          <div class="vpm-sector-card">
-            <h3>Buildings</h3>
-            <p>Residential, commercial and institutional projects.</p>
-          </div>
-
-          <!-- 4 -->
-          <div class="vpm-sector-card">
-            <h3>Structural & Concrete</h3>
-            <p>Quality, inspection and technical coordination.</p>
-          </div>
-
-          <!-- 5 -->
-          <div class="vpm-sector-card">
-            <h3>Rehabilitation & Renewal</h3>
-            <p>Repair, retrofit and infrastructure renewal.</p>
-          </div>
-
-          <!-- 6 -->
-          <div class="vpm-sector-card">
-            <h3>Permit Projects</h3>
-            <p>Engineering and building permit support.</p>
-          </div>
-        </div>
-      </div>
+    </div>
     </section>
 
-    <!-- ===================================================================
-         PAGE 5: CAREERS
-         =================================================================== -->
-    <section class="vpm-careers-section" id="careers">
-      <div class="container">
-        <div class="vpm-careers-split">
-          <div class="vpm-split-img-wrap">
-            <img src="assets/final_pdf/img_hero_construction.png" alt="Career at VertexPM Southern Ontario"
-              class="vpm-split-img">
-          </div>
-          <div class="vpm-dark-box">
-            <span class="vpm-eyebrow-dark">CAREERS</span>
-            <h2>Build quality. Build your career.</h2>
-            <p>
-              VertexPM is interested in connecting with construction and quality professionals who value practical
-              project delivery, strong documentation and attention to detail.
-            </p>
 
-            <div class="vpm-career-tags-grid">
-              <div class="vpm-career-tag">QUALITY COORDINATION</div>
-              <div class="vpm-career-tag">CONSTRUCTION INSPECTION</div>
-              <div class="vpm-career-tag">PROJECT COORDINATION</div>
-              <div class="vpm-career-tag">QUALITY DOCUMENTATION</div>
-              <div class="vpm-career-tag">WELDING INSPECTION</div>
-              <div class="vpm-career-tag">COATING INSPECTION</div>
-            </div>
 
-            <div>
-              <a href="mailto:info@vertexpminc.com?subject=Career%20Inquiry%20-%20VertexPM" class="vpm-careers-link">
-                Submit your resume to info@vertexpminc.com →
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ===================================================================
-         PAGE 5: WHY VERTEXPM
-         =================================================================== -->
-    <section class="vpm-why-section">
-      <div class="container">
-        <span class="vpm-eyebrow-dark">WHY VERTEXPM</span>
-        <h2 class="vpm-heading-dark">Practical delivery. Professional accountability.</h2>
-
-        <div class="vpm-why-grid">
-          <div class="vpm-why-card">
-            <h3>Construction-minded</h3>
-            <p>Support built around actual project conditions.</p>
-          </div>
-
-          <div class="vpm-why-card">
-            <h3>Quality-driven</h3>
-            <p>Requirements stay connected to verification records.</p>
-          </div>
-
-          <div class="vpm-why-card">
-            <h3>Engineering-backed</h3>
-            <p>Professional practice through a PEO Certificate of Authorization.</p>
-          </div>
-
-          <div class="vpm-why-card">
-            <h3>Closeout-focused</h3>
-            <p>Documentation is complete and ready for turnover.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         PAGE 6: START HERE / REQUEST PROJECT SUPPORT
-         =================================================================== -->
-    <section class="vpm-support-section" id="contact">
-      <div class="container">
-        <div class="vpm-support-split">
-          <!-- Left: Checklist Card -->
-          <div class="vpm-support-checklist-box">
-            <span class="vpm-eyebrow-dark">START HERE</span>
-            <h2>Tell us what your project needs.</h2>
-            <p style="color: #CBD5E1; line-height: 1.6; margin-top: 1rem;">
-              Request support for a new project, active construction, municipal quality assurance, a building permit
-              requirement, specialized inspection or project closeout.
-            </p>
-
-            <ul class="vpm-support-checklist">
-              <li><span class="chk-icon">✓</span> Construction management</li>
-              <li><span class="chk-icon">✓</span> Quality management</li>
-              <li><span class="chk-icon">✓</span> Owner / municipal quality assurance</li>
-              <li><span class="chk-icon">✓</span> Inspection and testing coordination</li>
-              <li><span class="chk-icon">✓</span> Welding inspection</li>
-              <li><span class="chk-icon">✓</span> Protective coating inspection</li>
-              <li><span class="chk-icon">✓</span> Building permit support</li>
-              <li><span class="chk-icon">✓</span> Red-line and as-built services</li>
-              <li><span class="chk-icon">✓</span> Closeout and turnover</li>
-            </ul>
-          </div>
-
-          <!-- Right: Intake Form Card -->
-          <div class="vpm-form-card" id="project-support">
-            <h3>Request Project Support</h3>
-            <form id="project-support-form" onsubmit="handleSupportSubmit(event)">
-              <div class="vpm-form-grid">
-                <div class="vpm-form-group">
-                  <label class="vpm-form-label" for="support-name">Name / Organization *</label>
-                  <input type="text" id="support-name" class="vpm-form-input" placeholder="Your name or organization"
-                    required>
-                </div>
-
-                <div class="vpm-form-group">
-                  <label class="vpm-form-label" for="support-contact">Email / Phone *</label>
-                  <input type="text" id="support-contact" class="vpm-form-input"
-                    placeholder="email@company.com or phone" required>
-                </div>
-
-                <div class="vpm-form-group vpm-form-full">
-                  <label class="vpm-form-label" for="support-project">Project name and location *</label>
-                  <input type="text" id="support-project" class="vpm-form-input"
-                    placeholder="e.g. Burlington Infrastructure Upgrade" required>
-                </div>
-
-                <div class="vpm-form-group">
-                  <label class="vpm-form-label" for="support-service">Service required *</label>
-                  <select id="support-service" class="vpm-form-select" required>
-                    <option value="">Select a service...</option>
-                    <option value="Construction Management">Construction Management</option>
-                    <option value="Quality Management">Quality Management (CQMPs, ITPs)</option>
-                    <option value="Building Permit Support">Building Permit Support</option>
-                    <option value="Specialized Inspection">Welding & Protective Coating Inspection</option>
-                    <option value="Owner / Municipal QA">Owner / Municipal QA Oversight</option>
-                    <option value="Closeout & Turnover">Closeout & Turnover</option>
-                    <option value="Full Project Delivery">Full Project Delivery Support</option>
-                  </select>
-                </div>
-
-                <div class="vpm-form-group">
-                  <label class="vpm-form-label" for="support-stage">Current project stage</label>
-                  <select id="support-stage" class="vpm-form-select">
-                    <option value="Planning & Pre-Construction">Planning & Pre-Construction</option>
-                    <option value="Permitting & Engineering">Permitting & Engineering</option>
-                    <option value="Active Construction">Active Construction</option>
-                    <option value="Inspection & Testing">Inspection & Testing</option>
-                    <option value="Closeout & Turnover">Closeout & Turnover</option>
-                  </select>
-                </div>
-
-                <div class="vpm-form-group vpm-form-full">
-                  <label class="vpm-form-label" for="support-date">Required start date</label>
-                  <input type="date" id="support-date" class="vpm-form-input">
-                </div>
-
-                <div class="vpm-form-group vpm-form-full">
-                  <label class="vpm-form-label" for="support-desc">Brief project description</label>
-                  <textarea id="support-desc" class="vpm-form-textarea"
-                    placeholder="Outline scope, specific challenges, requirements, or hold points..."></textarea>
-                </div>
-
-                <div class="vpm-form-group vpm-form-full">
-                  <label class="vpm-form-label">Attach drawings or supporting documents</label>
-                  <div class="vpm-file-upload" onclick="document.getElementById('support-file').click()">
-                    <span>📄 Click to attach drawings, ITPs or specifications (PDF, DWG, DOCX)</span>
-                    <input type="file" id="support-file" style="display: none;" multiple
-                      onchange="handleFileSelect(event)">
-                    <div id="file-name-display"
-                      style="margin-top: 0.5rem; font-weight: 600; color: var(--navy-primary);"></div>
-                  </div>
-                </div>
-
-                <div class="vpm-form-group vpm-form-full" style="margin-top: 0.5rem;">
-                  <button type="submit" class="btn-vpm-submit" id="btn-submit-support">
-                    SUBMIT PROJECT REQUEST
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         PAGE 6: PRE-FOOTER SERVICE RECAP
-         =================================================================== -->
-    <section class="vpm-recap-section">
-      <div class="container">
-        <h2 class="vpm-heading-light" style="margin-bottom: 0.35rem;">Project support that keeps things moving.</h2>
-        <p class="vpm-sub-light" style="margin-bottom: 0;">Practical solutions. Clear accountability. Quality from start
-          to finish.</p>
-
-        <div class="vpm-recap-grid">
-          <div class="vpm-recap-card">
-            <div>
-              <h4>Construction Management</h4>
-              <p>Project coordination, reporting, RFI support, action tracking and document control.</p>
-            </div>
-            <a href="#services" class="vpm-recap-link">VIEW SERVICES →</a>
-          </div>
-
-          <div class="vpm-recap-card">
-            <div>
-              <h4>Quality Management</h4>
-              <p>CQMPs, ITPs, checklists, audits, NCRs, deficiencies and quality closeout.</p>
-            </div>
-            <a href="#services" class="vpm-recap-link">VIEW SERVICES →</a>
-          </div>
-
-          <div class="vpm-recap-card">
-            <div>
-              <h4>Building Permit Support</h4>
-              <p>Permit drawings, design coordination, Professional Engineer review and municipal comments.</p>
-            </div>
-            <a href="#services" class="vpm-recap-link">VIEW SERVICES →</a>
-          </div>
-
-          <div class="vpm-recap-card">
-            <div>
-              <h4>Closeout & Turnover</h4>
-              <p>Record reconciliation, issue closure and complete turnover packages.</p>
-            </div>
-            <a href="#services" class="vpm-recap-link">VIEW SERVICES →</a>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- ===================================================================
          PAGE 6: LET'S BUILD SUCCESS TOGETHER BANNER
@@ -798,8 +229,8 @@
             <p>Clear scope. Strong controls. Complete quality records from planning through construction and final
               turnover.</p>
           </div>
-          <div>
-            <a href="#contact" class="btn-vpm-orange">REQUEST PROJECT SUPPORT</a>
+          <div class="vpm-hero-actions">
+            <a href="contact.html" class="btn-vpm-orange">REQUEST PROJECT SUPPORT</a>
           </div>
         </div>
       </div>
@@ -824,19 +255,20 @@
             <li><a href="#insights">Quality Assurance & Inspection</a></li>
             <li><a href="#services">Building Permit Support</a></li>
           </ul>
-          <div>
-            <span class="vpm-peo-badge">PEO CERTIFICATE OF AUTHORIZATION</span>
-          </div>
+          <img class="vpm-peo-logo" src="assets/Screenshot 2026-11-03 193403_upscayl_8x_upscayl-standard-4x.png"
+            alt="Professional Engineers Ontario">
+          <p style="color: #FFFFFF; font-size: 14px; margin-top: 10px;">Certificate of Authorization</p>
         </div>
 
         <!-- Col 2: Location & Service Area -->
         <div class="vpm-footer-col">
           <h5>Location & Service Area</h5>
           <ul class="vpm-footer-contact-list">
-            <li><strong style="color: #FFFFFF;">Burlington, Ontario</strong></li>
-            <li>Serving Southern Ontario</li>
+            <li><strong style="color: #FFFFFF;">Location: Burlington, Ontario</strong></li>
+            <li>Service Area: Southern Ontario</li>
             <li>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="vpm-linkedin-badge">
+              <a href="https://www.linkedin.com/company/vertexpm-inc" target="_blank" rel="noopener noreferrer"
+                class="vpm-linkedin-badge">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                   <path
                     d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -855,10 +287,10 @@
               <a href="mailto:info@vertexpminc.com">info@vertexpminc.com</a>
             </li>
             <li>
-              <a href="tel:5199654233">519-965-4233</a>
+              <a href="tel:5199654233">+1(519) 965-4233</a>
             </li>
             <li>
-              <a href="tel:4165756951">416-575-6951</a>
+              <a href="tel:4165756951">+1(416) 575-6951</a>
             </li>
           </ul>
         </div>

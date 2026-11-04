@@ -1,50 +1,57 @@
 <!DOCTYPE html>
-<html lang="en-CA">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Request a Quote or Book a Consultation | VertexPM</title>
-  <meta name="description" content="Contact VertexPM Inc. to request a quote or book a direct consultation with a co-founder. Serving the Southern Ontario.">
-  <meta name="keywords" content="Contact VertexPM, Construction Consulting Quote Ontario, Book Consultation GTA, QA QC Proposal Toronto">
-  <meta name="author" content="VertexPM Inc.">
-  <link rel="canonical" href="https://vertexpm.ca/contact.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VertexPM Inc. | Construction Management, Quality & Engineering Support | Southern Ontario</title>
+    <meta name="description"
+        content="VertexPM delivers construction management, quality management, quality assurance and building permit support across Southern Ontario. Burlington-based practice operating under a PEO Certificate of Authorization.">
+    <meta name="keywords"
+        content="VertexPM Inc, Construction Management Burlington, Quality Management Southern Ontario, Building Permit Support, PEO Certificate of Authorization, Welding Inspection, Closeout and Turnover, QA QC Infrastructure">
+    <meta name="author" content="VertexPM Inc.">
+    <link rel="canonical" href="https://vertexpm.ca/">
 
-  <!-- Open Graph / Meta -->
-  <meta property="og:title" content="Contact VertexPM Inc. | Start a conversation">
-  <meta property="og:description" content="Tell us what you are building, where you need support and what comes next. Request a quote or book a direct partner consultation.">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_CA">
+    <!-- Open Graph / Meta -->
+    <meta property="og:title"
+        content="VertexPM Inc. | Built for construction. Driven by quality. Backed by engineering.">
+    <meta property="og:description"
+        content="VertexPM delivers construction management, quality management, quality assurance and building permit support across Southern Ontario.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_CA">
 
-  <!-- Favicon using animated Canadian V emblem loop -->
-  <link rel="icon" type="image/gif" href="assets/vertex-canada-loop.gif">
+    <!-- Favicon using Canadian V emblem loop -->
+    <link rel="icon" type="image/gif" href="assets/final_pdf/image.png">
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 
-  <!-- Structured Data JSON-LD for Canadian Engineering & Consulting Practice -->
-  <script type="application/ld+json">
+    <!-- Structured Data JSON-LD for Canadian Engineering & Construction Practice -->
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "EngineeringService",
     "name": "VertexPM Inc.",
-    "description": "Construction Management & Quality Consulting practice based in the Greater Toronto Area, Ontario, Canada.",
+    "description": "Burlington-based construction management, quality and engineering-support company serving Southern Ontario. VertexPM operates under a PEO Certificate of Authorization.",
     "url": "https://vertexpm.ca",
     "logo": "assets/vertex-canada-loop.gif",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Greater Toronto Area",
+      "addressLocality": "Burlington",
       "addressRegion": "ON",
       "addressCountry": "CA"
     },
     "areaServed": {
       "@type": "AdministrativeArea",
-      "name": "Ontario, Canada"
+      "name": "Southern Ontario, Canada"
     },
+    "telephone": ["+1-519-965-4233", "+1-416-575-6951"],
+    "email": "info@vertexpminc.com",
     "serviceType": [
-      "Quality Management",
       "Construction Management",
-      "Technical Inspection",
+      "Quality Management",
+      "Quality Assurance & Inspection",
+      "Building Permit Support",
       "Closeout & Turnover"
     ]
   }
@@ -52,298 +59,356 @@
 </head>
 
 <body>
-  <!-- Top Announcement & Canadian Infrastructure Status Bar -->
-  <div class="top-notice-bar">
-    <div class="status-pill">
-      <span class="status-dot"></span>
-      <span id="gta-time-display">Toronto, ON: 09:30 AM EDT</span>
-    </div>
-    <div class="top-quick-links">
-      <span class="top-status-text">🇨🇦 Burlington, ON • Serving Southern Ontario • PEO Authorized</span>
-      <button class="top-consult-btn" id="btn-top-consult" onclick="openConsultationModal()">📅 Book a
-        Consultation</button>
-    </div>
-  </div>
-
-  <!-- Sticky Main Navigation Header -->
-  <header class="main-header" id="top-nav">
-    <div class="container header-inner">
-      <!-- Authentic VertexPM Brand Badge with Animated Canada Loop -->
-      <a href="index.html" class="brand-lockup" id="brand-logo" aria-label="VertexPM Inc. Homepage">
-        <div class="brand-emblem-wrap">
-          <img src="assets/vertex-canada-loop.gif" alt="VertexPM Canadian Emblem - Original to Maple Leaf loop"
-            width="44" height="44" id="brand-emblem-img">
+    <!-- Top Announcement & Ontario Status Bar -->
+    <div class="top-notice-bar">
+        <div class="status-pill">
+            <span class="status-dot"></span>
+            <span id="gta-time-display">Burlington, ON: Serving Southern Ontario</span>
         </div>
-        <div class="brand-meta">
-          <div class="brand-title">
-            VertexPM <span class="inc">Inc.</span>
-          </div>
+        <div class="top-quick-links">
+            <span class="top-status-text">+1(519)-965-4233 / +1(416)-575-6951</span>
         </div>
-      </a>
-
-      <!-- Desktop Navigation Menu -->
-      <nav aria-label="Main Navigation">
-        <ul class="nav-menu" id="desktop-menu">
-          <li><a href="index.html" data-page="index.html" class="nav-link" id="nav-home" onclick="closeMobileMenu()">Home</a></li>
-          <li><a href="about.html" data-page="about.html" class="nav-link" id="nav-about" onclick="closeMobileMenu()">About</a></li>
-          <li><a href="services.html" data-page="services.html" class="nav-link" id="nav-services" onclick="closeMobileMenu()">Services</a></li>
-          <li><a href="industries.html" data-page="industries.html" class="nav-link" id="nav-industries" onclick="closeMobileMenu()">Industries</a></li>
-          <li><a href="experience.html" data-page="experience.html" class="nav-link" id="nav-experience" onclick="closeMobileMenu()">Experience</a></li>
-          <li><a href="contact.html" data-page="contact.html" class="nav-link active" id="nav-contact" onclick="closeMobileMenu()">Contact</a></li>
-          <li class="mobile-only-nav"><a href="javascript:void(0)" class="nav-link highlight-orange"
-              onclick="openConsultationModal(); closeMobileMenu();">📅 Book a Consultation</a></li>
-          <li class="mobile-only-nav"><a href="javascript:void(0)" class="nav-link mobile-quote-link"
-              onclick="openQuoteModal(); closeMobileMenu();">Request a Quote <span class="arrow">↗</span></a></li>
-        </ul>
-      </nav>
-
-      <!-- Action Buttons -->
-      <div class="header-actions">
-        <button class="btn-consultation-header" id="btn-open-consult-header" onclick="openConsultationModal()">
-          <span class="btn-cal-icon">📅</span> Book a Consultation
-        </button>
-        <button class="btn-quote-header" id="btn-open-quote-modal" onclick="openQuoteModal()">
-          Request a quote <span class="arrow">↗</span>
-        </button>
-        <button class="mobile-toggle" id="btn-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
-          onclick="toggleMobileMenu()">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-      </div>
     </div>
-  </header>
-  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" onclick="closeMobileMenu()"></div>
 
-  <main id="website-flow-container">
+    <!-- Main Navigation Header -->
+    <header class="main-header" id="top-nav">
+        <div class="container header-inner">
+            <!-- Authentic VertexPM Brand Badge -->
+            <a href="index.html" class="brand-lockup" id="brand-logo" aria-label="VertexPM Inc. Homepage">
+                <div class="brand-emblem-wrap">
+                    <img src="assets/final_pdf/image.png" alt="VertexPM Emblem" width="44" height="44"
+                        id="brand-emblem-img">
+                </div>
+                <div class="brand-meta">
+                    <div class="brand-title">
+                        VertexPM <span class="inc">Inc.</span>
+                    </div>
+                </div>
+            </a>
 
-    <section class="page-hero">
-      <div class="container">
-        <nav class="page-breadcrumb" aria-label="Breadcrumb">
-          <a href="index.html">Home</a>
-          <span>/</span>
-          <span aria-current="page">Contact</span>
-        </nav>
-        <span class="section-tag">CONNECT WITH US</span>
-        <h1 class="page-hero-title">Let's talk about your project.</h1>
-        <p class="page-hero-lede">Request a quote or book a direct consultation with a VertexPM co-founder.</p>
-      </div>
+            <!-- Desktop Navigation Menu -->
+            <nav aria-label="Main Navigation">
+                <ul class="nav-menu" id="desktop-menu">
+                    <li><a href="index.html" class="nav-link" id="nav-home" onclick="closeMobileMenu()">HOME</a></li>
+                    <li><a href="about.html" class="nav-link" id="nav-about" onclick="closeMobileMenu()">ABOUT</a></li>
+                    <li><a href="services.html" class="nav-link" id="nav-services"
+                            onclick="closeMobileMenu()">SERVICES</a></li>
+                    <li><a href="sectors.html" class="nav-link" id="nav-sectors" onclick="closeMobileMenu()">SECTORS</a>
+                    </li>
+                    <li><a href="careers.html" class="nav-link" id="nav-careers" onclick="closeMobileMenu()">CAREERS</a>
+                    </li>
+                    <li><a href="contact.html" class="nav-link" id="nav-contact" onclick="closeMobileMenu()">CONTACT</a>
+                    </li>
+                    <li class="mobile-only-nav">
+                        <a href="contact.html" class="nav-link highlight-orange" onclick="closeMobileMenu()">REQUEST
+                            PROJECT
+                            SUPPORT</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Action Button -->
+            <div class="header-actions">
+                <button class="mobile-toggle" id="btn-mobile-toggle" aria-label="Toggle navigation menu"
+                    aria-expanded="false" onclick="toggleMobileMenu()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" onclick="closeMobileMenu()"></div>
+
+
+    <main>
+
+        <!-- ===================================================================
+         PAGE 1: HERO SECTION
+         =================================================================== -->
+        <section class="vpm-hero-section" id="hero">
+            <div class="container">
+                <div class="vpm-hero-content">
+                    <div class="eyebrow">Contact VertexPM</div>
+                    <span class="vpm-eyebrow">CONSTRUCTION • QUALITY • ENGINEERING</span>
+                    <h1 class="vpm-hero-title">
+                        Built for construction.<br>
+                        Driven by quality.<br>
+                        Backed by engineering.
+                    </h1>
+                    <p class="vpm-hero-lead">
+                        VertexPM delivers construction management, quality management, quality assurance and building
+                        permit support
+                        across Southern Ontario.
+                    </p>
+                    <div class="vpm-hero-actions">
+                        <a href="#contact" class="btn-vpm-orange">REQUEST PROJECT SUPPORT</a>
+                        <a href="services.html" class="btn-vpm-outline">EXPLORE SERVICES</a>
+                    </div>
+                </div>
+
+                <!-- Hero Location & Service Area Bar -->
+                <div class="vpm-hero-bar">
+                    <div class="vpm-hero-bar-col">
+                        <span class="vpm-bar-label">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Location
+                        </span>
+                        <h4>Burlington, Ontario</h4>
+                    </div>
+
+                    <div class="vpm-hero-bar-col">
+                        <span class="vpm-bar-label">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                            Service Area
+                        </span>
+                        <h4>Southern Ontario</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ===================================================================
+         PAGE 2: AUDIENCE BANNER
+         =================================================================== -->
+        <div class="vpm-audience-banner">
+            <div class="container">
+                <div class="vpm-audience-text">
+                    SERVING CONTRACTORS • MUNICIPALITIES • OWNERS • DEVELOPERS • PROJECT TEAMS
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- ===================================================================
+         PAGE 6: START HERE / REQUEST PROJECT SUPPORT
+         =================================================================== -->
+        <section class="vpm-support-section" id="contact">
+            <div class="container">
+                <div class="vpm-support-split">
+                    <!-- Left: Checklist Card -->
+                    <div class="vpm-support-checklist-box">
+                        <span class="vpm-eyebrow-dark">START HERE</span>
+                        <h2>Tell us what your project needs.</h2>
+                        <p style="color: #CBD5E1; line-height: 1.6; margin-top: 1rem;">
+                            Request support for a new project, active construction, municipal quality assurance, a
+                            building permit
+                            requirement, specialized inspection or project closeout.
+                        </p>
+
+                        <ul class="vpm-support-checklist">
+                            <li><span class="chk-icon">✓</span> Construction management</li>
+                            <li><span class="chk-icon">✓</span> Quality management</li>
+                            <li><span class="chk-icon">✓</span> Owner / municipal quality assurance</li>
+                            <li><span class="chk-icon">✓</span> Inspection and testing coordination</li>
+                            <li><span class="chk-icon">✓</span> Welding inspection</li>
+                            <li><span class="chk-icon">✓</span> Protective coating inspection</li>
+                            <li><span class="chk-icon">✓</span> Building permit support</li>
+                            <li><span class="chk-icon">✓</span> Red-line and as-built services</li>
+                            <li><span class="chk-icon">✓</span> Closeout and turnover</li>
+                        </ul>
+                    </div>
+
+                    <!-- Right: Intake Form Card -->
+                    <div class="vpm-form-card" id="project-support">
+                        <h3>Request Project Support</h3>
+                        <form id="project-support-form" onsubmit="handleSupportSubmit(event)">
+                            <div class="vpm-form-grid">
+                                <div class="vpm-form-group">
+                                    <label class="vpm-form-label" for="support-name">Name / Organization *</label>
+                                    <input type="text" id="support-name" class="vpm-form-input"
+                                        placeholder="Your name or organization" required>
+                                </div>
+
+                                <div class="vpm-form-group">
+                                    <label class="vpm-form-label" for="support-contact">Email / Phone *</label>
+                                    <input type="text" id="support-contact" class="vpm-form-input"
+                                        placeholder="email@company.com or phone" required>
+                                </div>
+
+                                <div class="vpm-form-group vpm-form-full">
+                                    <label class="vpm-form-label" for="support-project">Project name and location
+                                        *</label>
+                                    <input type="text" id="support-project" class="vpm-form-input"
+                                        placeholder="e.g. Burlington Infrastructure Upgrade" required>
+                                </div>
+
+                                <div class="vpm-form-group">
+                                    <label class="vpm-form-label" for="support-service">Service required *</label>
+                                    <select id="support-service" class="vpm-form-select" required>
+                                        <option value="">Select a service...</option>
+                                        <option value="Construction Management">Construction Management</option>
+                                        <option value="Quality Management">Quality Management (CQMPs, ITPs)</option>
+                                        <option value="Building Permit Support">Building Permit Support</option>
+                                        <option value="Specialized Inspection">Welding & Protective Coating Inspection
+                                        </option>
+                                        <option value="Owner / Municipal QA">Owner / Municipal QA Oversight</option>
+                                        <option value="Closeout & Turnover">Closeout & Turnover</option>
+                                        <option value="Full Project Delivery">Full Project Delivery Support</option>
+                                    </select>
+                                </div>
+
+                                <div class="vpm-form-group">
+                                    <label class="vpm-form-label" for="support-stage">Current project stage</label>
+                                    <select id="support-stage" class="vpm-form-select">
+                                        <option value="Planning & Pre-Construction">Planning & Pre-Construction</option>
+                                        <option value="Permitting & Engineering">Permitting & Engineering</option>
+                                        <option value="Active Construction">Active Construction</option>
+                                        <option value="Inspection & Testing">Inspection & Testing</option>
+                                        <option value="Closeout & Turnover">Closeout & Turnover</option>
+                                    </select>
+                                </div>
+
+                                <div class="vpm-form-group vpm-form-full">
+                                    <label class="vpm-form-label" for="support-date">Required start date</label>
+                                    <input type="date" id="support-date" class="vpm-form-input">
+                                </div>
+
+                                <div class="vpm-form-group vpm-form-full">
+                                    <label class="vpm-form-label" for="support-desc">Brief project description</label>
+                                    <textarea id="support-desc" class="vpm-form-textarea"
+                                        placeholder="Outline scope, specific challenges, requirements, or hold points..."></textarea>
+                                </div>
+
+                                <div class="vpm-form-group vpm-form-full">
+                                    <label class="vpm-form-label">Attach drawings or supporting documents</label>
+                                    <div class="vpm-file-upload"
+                                        onclick="document.getElementById('support-file').click()">
+                                        <span>📄 Click to attach drawings, ITPs or specifications (PDF, DWG, DOCX; max
+                                            25 MB per file)</span>
+                                        <input type="file" id="support-file" style="display: none;" multiple
+                                            onchange="handleFileSelect(event)">
+                                        <div id="file-name-display" role="status" aria-live="polite"
+                                            style="margin-top: 0.5rem; font-weight: 600; color: var(--navy-primary);">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vpm-form-group vpm-form-full" style="margin-top: 0.5rem;">
+                                    <button type="submit" class="btn-vpm-submit" id="btn-submit-support">
+                                        SUBMIT PROJECT REQUEST
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- ===================================================================
+         PAGE 6: LET'S BUILD SUCCESS TOGETHER BANNER
+         =================================================================== -->
+    <section class="vpm-together-banner">
+        <div class="container">
+            <div class="vpm-together-inner">
+                <div class="vpm-together-content">
+                    <span class="vpm-eyebrow-dark">LET'S BUILD SUCCESS TOGETHER</span>
+                    <h2>Your project. Our full attention.</h2>
+                    <p>Clear scope. Strong controls. Complete quality records from planning through construction and
+                        final
+                        turnover.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- CONTACT / REQUEST A QUOTE (From Concept Page 07) -->
-    <section class="contact-section" id="contact">
-      <div class="container contact-split-grid">
-        <!-- Left Side Information -->
-        <div class="contact-info-col">
-          <span class="contact-tag">START A CONVERSATION</span>
-          <h2 class="contact-headline">
-            Your next project.<br>
-            <span class="highlight-orange">Our full attention.</span>
-          </h2>
-          <p class="contact-subtext">
-            Tell us what you are building, where you need support and what comes next.
-          </p>
+    </main>
 
-          <div class="contact-meta-table">
-            <div class="contact-meta-row">
-              <span class="label">Region</span>
-              <span class="value">GREATER TORONTO AREA, ONTARIO</span>
-            </div>
-            <div class="contact-meta-row">
-              <span class="label">Email</span>
-              <a href="mailto:info@vertexpminc.com" class="value">info@vertexpminc.com</a>
-            </div>
-            <div class="contact-meta-row">
-              <span class="label">Phone</span>
-              <a href="tel:5199654233" class="value">519-965-4233 / 416-575-6951 (GTA Line)</a>
-            </div>
-            <div class="contact-meta-row">
-              <span class="label">LinkedIn</span>
-              <a href="https://linkedin.com/company/vertexpm" target="_blank" rel="noopener" class="value">VertexPM
-                Inc.</a>
-            </div>
-            <div class="contact-meta-row">
-              <span class="label">Office location</span>
-              <span class="value">Greater Toronto Area, Ontario, Canada</span>
-            </div>
-          </div>
-
-          <div class="gta-service-card">
-            <div class="gta-maple-icon">🍁</div>
-            <div class="gta-text">
-              <h5>Canadian Infrastructure Focus</h5>
-              <p>Active consulting across Toronto, Peel, York, Durham, Halton, and provincial highway corridors.</p>
-            </div>
-          </div>
-
-          <!-- Direct Co-Founder Consultation Callout Card -->
-          <div class="consultation-callout-card">
-            <div class="consult-badge">📅 DIRECT PARTNER CALENDAR</div>
-            <h4>Book a 1-on-1 Consultation</h4>
-            <p>Schedule a 30-minute direct consultation with a VertexPM co-founder to review upcoming project
-              requirements, RFP/ITP specifications, or quality assurance programs across Ontario.</p>
-            <button class="btn-primary-orange btn-consult-trigger" onclick="openConsultationModal()">
-              <span>📅</span> Schedule Consultation Now ↗
-            </button>
-          </div>
-        </div>
-
-        <!-- Right Side Quote Request Form (Concept 07 Form) -->
-        <div class="quote-form-card">
-          <div class="form-header">
-            <h3 class="form-title">Request a quote</h3>
-            <p class="form-sub">A few details to start the conversation.</p>
-          </div>
-
-          <form id="quote-inquiry-form" class="quote-form" onsubmit="handleQuoteSubmit(event)">
-            <div class="form-row-2col">
-              <div class="form-group">
-                <label for="client-name">NAME <span class="req">*</span></label>
-                <input type="text" id="client-name" class="form-control" placeholder="Your full name" required>
-              </div>
-              <div class="form-group">
-                <label for="client-company">COMPANY</label>
-                <input type="text" id="client-company" class="form-control" placeholder="Company name">
-              </div>
-            </div>
-
-            <div class="form-row-2col">
-              <div class="form-group">
-                <label for="client-email">EMAIL <span class="req">*</span></label>
-                <input type="email" id="client-email" class="form-control" placeholder="you@company.com" required>
-              </div>
-              <div class="form-group">
-                <label for="client-phone">PHONE</label>
-                <input type="tel" id="client-phone" class="form-control" placeholder="Your phone number">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="client-service">SERVICE REQUIRED <span class="req">*</span></label>
-              <select id="client-service" class="form-control" required>
-                <option value="" disabled selected>Select a service</option>
-                <option value="Quality management">01 Quality management (QMP, CQMP, ITP)</option>
-                <option value="Construction management">02 Construction management (Oversight, Schedule, Risk)</option>
-                <option value="Technical inspection">03 Technical inspection (Concrete, Civil, Transit, Bridge)</option>
-                <option value="Closeout & turnover">04 Closeout & turnover (Turnover Packages, Deficiencies)</option>
-                <option value="Full QA/QC Consulting Package">Comprehensive Partner-Led QA/QC Package</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="client-details">PROJECT DETAILS <span class="req">*</span></label>
-              <textarea id="client-details" class="form-control"
-                placeholder="Location, scope, timing and support needed..." required></textarea>
-            </div>
-
-            <button type="submit" class="btn-submit-proposal" id="btn-submit-proposal">
-              Request proposal <span class="arrow">↗</span>
-            </button>
-
-            <div class="form-mockup-note">
-              Visual concept & active form delivery for Ontario infrastructure partners.
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ===================================================================
-       FOOTER
+    <!-- ===================================================================
+       PAGE 6: MAIN FOOTER
        =================================================================== -->
-  <footer class="main-footer">
-    <div class="container">
-      <div class="footer-top-grid">
-        <div class="footer-brand-col">
-          <div
-            style="display: inline-flex; align-items: center; gap: 0.6rem; background: rgba(255,255,255,0.06); padding: 0.4rem 0.8rem; border-radius: 6px;">
-            <img src="assets/vertex-canada-loop.gif" width="32" height="32" alt="VertexPM Canadian Emblem">
-            <span style="color: #FFFFFF; font-weight: 800; font-size: 1.1rem;">VertexPM <span
-                style="font-weight: 400; color: #94A3B8;">Inc.</span></span>
-          </div>
-          <p>
-            Construction Management & Quality Consulting.<br>
-            Partner-led, field-focused practice serving the Greater Toronto Area and infrastructure projects across
-            Ontario, Canada.
-          </p>
-        </div>
+    <footer class="vpm-footer">
+        <div class="container">
+            <div class="vpm-footer-grid">
+                <!-- Col 1: Brand & Services -->
+                <div class="vpm-footer-col">
+                    <div class="vpm-footer-brand-title">
+                        VertexPM <span style="color: var(--orange-accent); font-weight: 700;">Inc.</span>
+                    </div>
+                    <ul class="vpm-footer-services">
+                        <li><a href="#services">Construction Management</a></li>
+                        <li><a href="#services">Quality Management</a></li>
+                        <li><a href="#insights">Quality Assurance & Inspection</a></li>
+                        <li><a href="#services">Building Permit Support</a></li>
+                    </ul>
+                    <img class="vpm-peo-logo"
+                        src="assets/Screenshot 2026-11-03 193403_upscayl_8x_upscayl-standard-4x.png"
+                        alt="Professional Engineers Ontario">
+                    <p style="color: #FFFFFF; font-size: 14px; margin-top: 10px;">Certificate of Authorization</p>
+                </div>
 
-        <div class="footer-col">
-          <h5>Core Services</h5>
-          <ul class="footer-links">
-            <li><a href="services.html">Quality Management (QMP/ITP)</a></li>
-            <li><a href="services.html">Construction Oversight & Mgmt</a></li>
-            <li><a href="services.html">Technical Field Inspection</a></li>
-            <li><a href="services.html">Closeout & Turnover Verification</a></li>
-          </ul>
-        </div>
+                <!-- Col 2: Location & Service Area -->
+                <div class="vpm-footer-col">
+                    <h5>Location & Service Area</h5>
+                    <ul class="vpm-footer-contact-list">
+                        <li><strong style="color: #FFFFFF;">Location: Burlington, Ontario</strong></li>
+                        <li>Service Area: Southern Ontario</li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/vertexpm-inc" target="_blank"
+                                rel="noopener noreferrer" class="vpm-linkedin-badge">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-        <div class="footer-col">
-          <h5>Infrastructure Sectors</h5>
-          <ul class="footer-links">
-            <li><a href="industries.html">Transit & Guideways</a></li>
-            <li><a href="industries.html">Bridges & Heavy Civil</a></li>
-            <li><a href="industries.html">Highways & Transportation</a></li>
-            <li><a href="industries.html">Municipal Water & Utilities</a></li>
-          </ul>
-        </div>
+                <!-- Col 3: Contact Details -->
+                <div class="vpm-footer-col">
+                    <h5>Contact</h5>
+                    <ul class="vpm-footer-contact-list">
+                        <li>
+                            <a href="mailto:info@vertexpminc.com">info@vertexpminc.com</a>
+                        </li>
+                        <li>
+                            <a href="tel:5199654233">+1(519) 965-4233</a>
+                        </li>
+                        <li>
+                            <a href="tel:4165756951">+1(416) 575-6951</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="footer-col">
-          <h5>Location & Practice</h5>
-          <ul class="footer-links">
-            <li><span style="color: #FFFFFF;">Burlington, ON (Southern Ontario)</span></li>
-            <li><a href="mailto:info@vertexpminc.com">info@vertexpminc.com</a></li>
-            <li><a href="tel:5199654233">519-965-4233 / 416-575-6951</a></li>
-            <li><a href="javascript:void(0)" onclick="openConsultationModal()"
-                style="color: var(--orange-accent); font-weight: 700;">📅 Book a Consultation</a></li>
-            <li><a href="contact.html">Direct Partner Inquiry</a></li>
-          </ul>
+            <!-- Footer Bottom -->
+            <div class="vpm-footer-bottom">
+                <div>
+                    © <span id="current-year">2026</span> VertexPM Inc. All rights reserved.
+                </div>
+                <div class="vpm-footer-tagline">
+                    Built on quality. Delivered with confidence.
+                </div>
+            </div>
         </div>
-      </div>
+    </footer>
 
-      <div class="footer-bottom">
-        <div>
-          © <span id="current-year">2026</span> VertexPM Inc. All rights reserved. Quality in every phase.
-        </div>
-        <div style="display: flex; gap: 1.5rem;">
-          <a href="about.html" style="color: #94A3B8;">Practice Transparency</a>
-          <a href="experience.html" style="color: #94A3B8;">Credibility Statement</a>
-          <a href="contact.html" style="color: #94A3B8;">Ontario Compliance</a>
-          <a href="concept.html" style="color: #94A3B8;">Website Concept Deck</a>
-        </div>
-      </div>
+    <!-- Toast Notification for Form Submission -->
+    <div class="toast-notice" id="toast-notification">
+        Project request submitted successfully. A VertexPM engineer will follow up promptly.
     </div>
-  </footer>
 
-  <!-- ===================================================================
-       MODAL WINDOW FOR QUICK QUOTE & DELIVERABLES
-       =================================================================== -->
-  <div class="modal-backdrop" id="generic-modal" onclick="closeModalOnBackdrop(event)">
-    <div class="modal-window">
-      <div class="modal-header">
-        <h3 id="modal-title" style="font-size: 1.35rem; font-weight: 800; color: var(--navy-primary);">Deliverable
-          Specification</h3>
-        <button class="modal-close-btn" onclick="closeModal()" aria-label="Close modal">×</button>
-      </div>
-      <div class="modal-body" id="modal-body-content">
-        <!-- Dynamic Content injected via JS -->
-      </div>
-    </div>
-  </div>
-
-  <!-- Toast Notice -->
-  <div class="toast-notice" id="toast-notification">
-    Proposal request received. A partner will respond within 24 hours.
-  </div>
-
-  <!-- JavaScript Application Logic -->
-  <script src="app.js"></script>
+    <!-- JavaScript Application Logic -->
+    <script src="app.js"></script>
 </body>
 
 </html>

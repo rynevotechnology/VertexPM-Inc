@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | VertexPM Inc.</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Structured Data JSON-LD for Canadian Engineering & Construction Practice -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EngineeringService",
+    "name": "VertexPM Inc.",
+    "description": "Burlington-based construction management, quality and engineering-support company serving Southern Ontario. VertexPM operates under a PEO Certificate of Authorization.",
+    "url": "https://vertexpm.ca",
+    "logo": "assets/vertex-canada-loop.gif",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Burlington",
+      "addressRegion": "ON",
+      "addressCountry": "CA"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Southern Ontario, Canada"
+    },
+    "telephone": ["+1-519-965-4233", "+1-416-575-6951"],
+    "email": "info@vertexpminc.com",
+    "serviceType": [
+      "Construction Management",
+      "Quality Management",
+      "Quality Assurance & Inspection",
+      "Building Permit Support",
+      "Closeout & Turnover"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+    <!-- Top Announcement & Ontario Status Bar -->
+    <div class="top-notice-bar">
+        <div class="status-pill">
+            <span class="status-dot"></span>
+            <span id="gta-time-display">Burlington, ON: Serving Southern Ontario</span>
+        </div>
+        <div class="top-quick-links">
+            <span class="top-status-text">+1(519)-965-4233 / +1(416)-575-6951</span>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="main-header" id="top-nav">
+        <div class="container header-inner">
+            <!-- Authentic VertexPM Brand Badge -->
+            <a href="index.html" class="brand-lockup" id="brand-logo" aria-label="VertexPM Inc. Homepage">
+                <div class="brand-emblem-wrap">
+                    <img src="assets/final_pdf/image.png" alt="VertexPM Emblem" width="44" height="44"
+                        id="brand-emblem-img">
+                </div>
+                <div class="brand-meta">
+                    <div class="brand-title">
+                        VertexPM <span class="inc">Inc.</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Menu -->
+            <nav aria-label="Main Navigation">
+                <ul class="nav-menu" id="desktop-menu">
+                    <li><a href="index.html" class="nav-link" id="nav-Home" onclick="closeMobileMenu()">HOME</a></li>
+                    <li><a href="about.html" class="nav-link" id="nav-about" onclick="closeMobileMenu()">ABOUT</a></li>
+                    <li><a href="services.html" class="nav-link" id="nav-services"
+                            onclick="closeMobileMenu()">SERVICES</a></li>
+                    <li><a href="sectors.html" class="nav-link" id="nav-sectors" onclick="closeMobileMenu()">SECTORS</a>
+                    </li>
+                    <li><a href="careers.html" class="nav-link" id="nav-careers" onclick="closeMobileMenu()">CAREERS</a>
+                    </li>
+                    <li><a href="contact.html" class="nav-link" id="nav-contact" onclick="closeMobileMenu()">CONTACT</a>
+                    </li>
+                    <li class="mobile-only-nav">
+                        <a href="contact.html" class="nav-link highlight-orange" onclick="closeMobileMenu()">REQUEST
+                            PROJECT
+                            SUPPORT</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Action Button -->
+            <div class="header-actions">
+                <button class="mobile-toggle" id="btn-mobile-toggle" aria-label="Toggle navigation menu"
+                    aria-expanded="false" onclick="toggleMobileMenu()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" onclick="closeMobileMenu()"></div>
+    <main>
+
+        <!-- ===================================================================
+         PAGE 1: HERO SECTION
+         =================================================================== -->
+        <section class="vpm-hero-section career-hero" id="hero">
+            <div class="container">
+                <div class="vpm-hero-content">
+                    <div class="eyebrow">CAREERS AT VERTEXPM</div>
+                    <span class="vpm-eyebrow">CONSTRUCTION • QUALITY • PROJECT DELIVERY</span>
+                    <h1 class="vpm-hero-title">Join Our Team</h1>
+                    <p class="vpm-hero-lead">
+                        Build your career while helping deliver better construction projects across Southern Ontario.
+                    </p>
+                    <div class="vpm-hero-actions">
+                        <a href="#career-opportunities" class="btn-vpm-orange">EXPLORE CAREER PATHS</a>
+                        <a href="#career-application" class="btn-vpm-outline">APPLY NOW</a>
+                    </div>
+                </div>
+
+                <!-- Hero Location & Service Area Bar -->
+                <div class="vpm-hero-bar">
+                    <div class="vpm-hero-bar-col">
+                        <span class="vpm-bar-label">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Location
+                        </span>
+                        <h4>Burlington, Ontario</h4>
+                    </div>
+
+                    <div class="vpm-hero-bar-col">
+                        <span class="vpm-bar-label">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                            Service Area
+                        </span>
+                        <h4>Southern Ontario</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ===================================================================
+         PAGE 2: AUDIENCE BANNER
+         =================================================================== -->
+        <section class="career-intro">
+            <div class="container career-intro-grid">
+                <h2>Bring your experience, curiosity, and commitment to quality.</h2>
+                <p>VertexPM supports construction management, quality assurance, inspection, and building permit work.
+                    We welcome inquiries from professionals and students who care about practical project delivery,
+                    clear documentation, and strong communities.</p>
+            </div>
+        </section>
+
+
+
+        <!-- ===================================================================
+         PAGE 5: CAREERS
+         =================================================================== -->
+        <section class="career-opportunities" id="career-opportunities">
+            <div class="container">
+                <span class="career-eyebrow career-eyebrow-accent">GROW WITH VERTEXPM</span>
+                <h2 class="career-section-title">Explore Career Paths</h2>
+                <p class="career-section-lead">Interested in one of these areas? Contact us to ask about current and
+                    future opportunities.</p>
+                <div class="career-role-grid">
+                    <article class="career-role-card">
+                        <span class="career-role-type">Construction Quality</span>
+                        <h3>Quality Coordination</h3>
+                        <p>Support quality plans, inspection records, and project documentation.</p>
+                        <a href="mailto:info@vertexpminc.com?subject=Career%20Inquiry%20-%20Quality%20Coordination">Ask about this path <span aria-hidden="true">→</span></a>
+                    </article>
+                    <article class="career-role-card">
+                        <span class="career-role-type">Field Work</span>
+                        <h3>Construction Inspection</h3>
+                        <p>Contribute to field reviews, inspection coordination, and project reporting.</p>
+                        <a href="mailto:info@vertexpminc.com?subject=Career%20Inquiry%20-%20Construction%20Inspection">Ask about this path <span aria-hidden="true">→</span></a>
+                    </article>
+                    <article class="career-role-card">
+                        <span class="career-role-type">Project Delivery</span>
+                        <h3>Project Coordination</h3>
+                        <p>Help teams keep project communication, records, and milestones on track.</p>
+                        <a href="mailto:info@vertexpminc.com?subject=Career%20Inquiry%20-%20Project%20Coordination">Ask about this path <span aria-hidden="true">→</span></a>
+                    </article>
+                    <article class="career-role-card">
+                        <span class="career-role-type">Specialized Inspection</span>
+                        <h3>Welding &amp; Coating Inspection</h3>
+                        <p>Bring technical expertise to specialized inspection and quality activities.</p>
+                        <a href="mailto:info@vertexpminc.com?subject=Career%20Inquiry%20-%20Specialized%20Inspection">Ask about this path <span aria-hidden="true">→</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="career-why">
+            <div class="container">
+                <span class="career-eyebrow career-eyebrow-accent">WHY VERTEXPM</span>
+                <h2 class="career-section-title">Make a meaningful contribution</h2>
+                <div class="career-benefit-grid">
+                    <article class="career-benefit-card"><span aria-hidden="true">01</span><h3>Real project impact</h3><p>Support infrastructure and building work that serves local communities.</p></article>
+                    <article class="career-benefit-card"><span aria-hidden="true">02</span><h3>Collaborative teams</h3><p>Work alongside project partners with a practical, solutions-focused mindset.</p></article>
+                    <article class="career-benefit-card"><span aria-hidden="true">03</span><h3>Professional growth</h3><p>Keep learning across construction management, quality, and inspection.</p></article>
+                    <article class="career-benefit-card"><span aria-hidden="true">04</span><h3>Quality that matters</h3><p>Help create clear records and dependable outcomes from start to finish.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="career-students">
+            <div class="container career-students-inner">
+                <div>
+                    <span class="career-eyebrow">STUDENTS &amp; EARLY CAREER</span>
+                    <h2>Start building your experience.</h2>
+                    <p>Studying engineering, construction, or a related discipline? Introduce yourself and tell us what
+                        you hope to learn. We welcome student and co-op inquiries as opportunities arise.</p>
+                    <a href="#career-application" class="career-button career-button-light">Send an application <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="career-student-card">
+                    <h3>Areas to explore</h3>
+                    <ul>
+                        <li>Construction and quality documentation</li>
+                        <li>Project coordination and reporting</li>
+                        <li>Inspection and field support</li>
+                        <li>Professional development through project work</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="career-application" id="career-application">
+            <div class="container career-application-inner">
+                <span class="career-eyebrow career-eyebrow-accent">TAKE THE NEXT STEP</span>
+                <h2 class="career-section-title">Apply Now</h2>
+                <p class="career-section-lead">Share a few details and your email app will prepare an application message for VertexPM.</p>
+                <form class="career-form" onsubmit="handleCareerSubmit(event)">
+                    <div class="career-form-grid">
+                        <div class="career-form-field">
+                            <label for="career-first-name">First name <span aria-hidden="true">*</span></label>
+                            <input id="career-first-name" name="firstName" autocomplete="given-name" required>
+                        </div>
+                        <div class="career-form-field">
+                            <label for="career-last-name">Last name <span aria-hidden="true">*</span></label>
+                            <input id="career-last-name" name="lastName" autocomplete="family-name" required>
+                        </div>
+                        <div class="career-form-field career-form-full">
+                            <label for="career-email">Email <span aria-hidden="true">*</span></label>
+                            <input id="career-email" name="email" type="email" autocomplete="email" required>
+                        </div>
+                        <div class="career-form-field career-form-full">
+                            <label for="career-phone">Phone number <span aria-hidden="true">*</span></label>
+                            <input id="career-phone" name="phone" type="tel" autocomplete="tel" required>
+                        </div>
+                        <div class="career-form-field career-form-full">
+                            <label for="career-position">Area of interest <span aria-hidden="true">*</span></label>
+                            <select id="career-position" name="position" required>
+                                <option value="">Select an area</option>
+                                <option>Quality Coordination</option>
+                                <option>Construction Inspection</option>
+                                <option>Project Coordination</option>
+                                <option>Welding &amp; Coating Inspection</option>
+                                <option>Student / Co-op</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="career-form-field career-form-full">
+                            <label for="career-linkedin">LinkedIn profile <span class="career-optional">(optional)</span></label>
+                            <input id="career-linkedin" name="linkedin" type="url" autocomplete="url" placeholder="https://www.linkedin.com/in/">
+                        </div>
+                        <div class="career-form-field career-form-full">
+                            <label for="career-message">Your message <span aria-hidden="true">*</span></label>
+                            <textarea id="career-message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="career-form-field career-form-full">
+                            <button type="submit" class="career-button">Prepare Application Email <span aria-hidden="true">→</span></button>
+                        </div>
+                    </div>
+                    <p class="career-form-note">Your details are not uploaded or stored on this website. Attach your resume in your email app before sending.</p>
+                </form>
+            </div>
+        </section>
+
+
+
+        <!-- ===================================================================
+       PAGE 6: MAIN FOOTER
+       =================================================================== -->
+        <footer class="vpm-footer">
+            <div class="container">
+                <div class="vpm-footer-grid">
+                    <!-- Col 1: Brand & Services -->
+                    <div class="vpm-footer-col">
+                        <div class="vpm-footer-brand-title">
+                            VertexPM <span style="color: var(--orange-accent); font-weight: 700;">Inc.</span>
+                        </div>
+                        <ul class="vpm-footer-services">
+                            <li><a href="#services">Construction Management</a></li>
+                            <li><a href="#services">Quality Management</a></li>
+                            <li><a href="#insights">Quality Assurance & Inspection</a></li>
+                            <li><a href="#services">Building Permit Support</a></li>
+                        </ul>
+                        <img class="vpm-peo-logo"
+                            src="assets/Screenshot 2026-11-03 193403_upscayl_8x_upscayl-standard-4x.png"
+                            alt="Professional Engineers Ontario">
+                        <p style="color: #FFFFFF; font-size: 14px; margin-top: 10px;">Certificate of Authorization
+                        </p>
+                    </div>
+
+                    <!-- Col 2: Location & Service Area -->
+                    <div class="vpm-footer-col">
+                        <h5>Location & Service Area</h5>
+                        <ul class="vpm-footer-contact-list">
+                            <li><strong style="color: #FFFFFF;">Location: Burlington, Ontario</strong></li>
+                            <li>Service Area: Southern Ontario</li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/vertexpm-inc" target="_blank"
+                                    rel="noopener noreferrer" class="vpm-linkedin-badge">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                    LinkedIn
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3: Contact Details -->
+                    <div class="vpm-footer-col">
+                        <h5>Contact</h5>
+                        <ul class="vpm-footer-contact-list">
+                            <li>
+                                <a href="mailto:info@vertexpminc.com">info@vertexpminc.com</a>
+                            </li>
+                            <li>
+                                <a href="tel:5199654233">+1(519) 965-4233</a>
+                            </li>
+                            <li>
+                                <a href="tel:4165756951">+1(416) 575-6951</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="vpm-footer-bottom">
+                    <div>
+                        © <span id="current-year">2026</span> VertexPM Inc. All rights reserved.
+                    </div>
+                    <div class="vpm-footer-tagline">
+                        Built on quality. Delivered with confidence.
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Toast Notification for Form Submission -->
+        <div class="toast-notice" id="toast-notification">
+            Your email app should open with your application details.
+        </div>
+
+        <!-- JavaScript Application Logic -->
+        <script src="app.js"></script>
+
+
+</body>
+
+</html>
