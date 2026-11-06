@@ -1112,7 +1112,42 @@ async function handleSupportSubmit(e) {
   }
 
   const name = document.getElementById("support-name")?.value.trim() || "Client";
+  const contact = document.getElementById("support-contact")?.value.trim() || "";
+  const project = document.getElementById("support-project")?.value.trim() || "";
   const service = document.getElementById("support-service")?.value || "Project Support";
+  const stage = document.getElementById("support-stage")?.value || "Not specified";
+  const startDate = document.getElementById("support-date")?.value || "Not specified";
+  const description = document.getElementById("support-desc")?.value.trim() || "No description provided.";
+  const files = document.getElementById("support-file");
+  const filenames = files instanceof HTMLInputElement && files.files
+    ? Array.from(files.files, file => file.name).join(", ")
+    : "";
+  const emailTemplateFields = {
+    email: document.getElementById("support-email-template-email"),
+    subject: document.getElementById("support-email-template-subject"),
+    message: document.getElementById("support-email-template-message"),
+    filename: document.getElementById("support-email-template-filename")
+  };
+  if (
+    emailTemplateFields.email instanceof HTMLInputElement &&
+    emailTemplateFields.subject instanceof HTMLInputElement &&
+    emailTemplateFields.message instanceof HTMLInputElement &&
+    emailTemplateFields.filename instanceof HTMLInputElement
+  ) {
+    emailTemplateFields.email.value = contact;
+    emailTemplateFields.subject.value = `${service} - ${project}`;
+    emailTemplateFields.message.value = [
+      `Project: ${project}`,
+      `Contact: ${contact}`,
+      `Service required: ${service}`,
+      `Project stage: ${stage}`,
+      `Required start date: ${startDate}`,
+      "",
+      "Project description:",
+      description
+    ].join("\n");
+    emailTemplateFields.filename.value = filenames || "No files attached";
+  }
   const submittedAt = document.getElementById("support-submitted-at");
   if (submittedAt instanceof HTMLInputElement) {
     submittedAt.value = new Date().toLocaleString("en-CA", { timeZone: "America/Toronto" });

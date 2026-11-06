@@ -284,20 +284,20 @@
                                 </div>
 
                                 <input type="hidden" id="support-submitted-at" name="submitted_at">
-
-                                <div class="vpm-form-group vpm-form-full">
+                                <!-- <div class="vpm-form-group vpm-form-full">
                                     <label class="vpm-form-label">Attach drawings or supporting documents</label>
                                     <div class="vpm-file-upload"
                                         onclick="document.getElementById('support-file').click()">
-                                        <span>📄 Click to attach drawings, ITPs or specifications (PDF, DWG, DOCX; max
-                                            25 MB per file)</span>
-                                        <input type="file" id="support-file" name="support_files" style="display: none;" multiple
+                                        <span>📄 Click to attach drawings, ITPs or specifications (PDF, DWG, DOC/DOCX;
+                                            max 25 MB per file; sent as email attachments)</span>
+                                        <input type="file" id="support-file" name="support_files"
+                                            accept=".pdf,.dwg,.doc,.docx" style="display: none;" multiple
                                             onchange="handleFileSelect(event)">
                                         <div id="file-name-display" role="status" aria-live="polite"
                                             style="margin-top: 0.5rem; font-weight: 600; color: var(--navy-primary);">
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="vpm-form-group vpm-form-full" style="margin-top: 0.5rem;">
                                     <button type="submit" class="btn-vpm-submit" id="btn-submit-support">
